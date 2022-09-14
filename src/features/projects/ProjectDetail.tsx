@@ -18,7 +18,7 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
         <div className="grid grid-cols-[1fr] sm:grid-cols-[1fr_auto] gap-2 items-end">
           {title ? (
             flag ? (
-              <div className="inline-flex gap-4 items-center">
+              <div className="grid sm:grid-cols-[auto_auto] gap-4 justify-start justify-items-start items-center">
                 <h2>{title}</h2>
                 <Chip size="lg">{flag}</Chip>
               </div>

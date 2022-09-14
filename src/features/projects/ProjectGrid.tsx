@@ -136,7 +136,7 @@ const ProjectGrid: FC<ProjectGridProps> = ({
                   <figcaption className="flex flex-col gap-4 items-start py-6 text-(navy-900 dark:white)">
                     {title ? (
                       flag ? (
-                        <div className="inline-flex gap-4 items-center">
+                        <div className="grid sm:grid-cols-[auto_auto] gap-4 justify-items-start items-center">
                           <h3>{title}</h3>
                           <Chip size="sm">{flag}</Chip>
                         </div>
