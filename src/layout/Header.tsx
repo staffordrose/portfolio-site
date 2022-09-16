@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { FC } from 'react'
 import Link from 'next/link'
 import { NextRouter, useRouter } from 'next/router'
@@ -32,55 +32,50 @@ const Nav: FC<NavProps> = ({ router }) => {
 
   const prevMarker = usePrevious(marker)
 
-  const updateMarker = (slug: string) => {
-    if (!slug) {
+  const updateMarker = useCallback(
+    slug => {
+      if (!slug) {
+        setMarker({
+          width: 0,
+          offsetLeft: 0,
+        })
+        return
+      }
+
+      const pageIndex = pages.findIndex(p => p.id === slug)
+      const element = linkElements.current[pageIndex]
+
+      if (!element) return
+
       setMarker({
-        width: 0,
-        offsetLeft: 0,
+        width: element.clientWidth,
+        offsetLeft: element.offsetLeft,
       })
-      return
-    }
-
-    const pageIndex = pages.findIndex(p => p.id === slug)
-    const element = linkElements.current[pageIndex]
-
-    if (!element) return
-
-    setMarker({
-      width: element.clientWidth,
-      offsetLeft: element.offsetLeft,
-    })
-  }
+    },
+    [pages, linkElements.current],
+  )
 
   useEffect(() => updateMarker(slug), [slug])
 
   return (
-    <nav className="h-full">
-      <ul
+    <nav className="relative h-full">
+      <span
         className={`
-          relative flex gap-2 items-center
-          h-full w-auto
-          after:(
-            bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500
-            ${slug ? `opacity-100` : `opacity-0`}
-          )
+          absolute bottom-[18px] left-0
+          h-[2px] rounded-[1px]
+          bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500
           ${css`
-            &::after {
-              content: '';
-              position: absolute;
-              bottom: 18px;
-              left: 0;
-              height: 2px;
-              width: ${marker.width - 16}px;
-              border-radius: 1px;
-              transform: translate3d(${marker.offsetLeft + 9}px, 0, 0);
-              transition: ${prevMarker?.width > 0
-                ? `transform 300ms, width 200ms, opacity 300ms`
-                : `opacity 300ms`};
-            }
+            width: ${marker.width - 16}px;
+            opacity: ${slug ? 1 : 0};
+            transform: translate3d(${marker.offsetLeft + 9}px, 0, 0);
+            transition: ${prevMarker?.width > 0
+              ? `transform 300ms, width 200ms, opacity 300ms`
+              : `opacity 300ms`};
           `}
         `}
-      >
+      />
+
+      <ul className="flex gap-2 items-center h-full w-auto">
         {pages.map(({ id, name }, i) => (
           <li key={id}>
             <Link href={`/${id}`}>
