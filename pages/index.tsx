@@ -103,6 +103,7 @@ const Home: NextPage = () => {
             ref={el => (anchorElements.current[0] = el)}
             id={sections[0].id}
             className="relative -top-16 block"
+            href={`#${sections[0].id}`}
           />
 
           <Introduction theme={theme} isVisible={sectionVisibility[0].value} />
@@ -116,6 +117,7 @@ const Home: NextPage = () => {
             ref={el => (anchorElements.current[1] = el)}
             id={sections[1].id}
             className="relative -top-16 block"
+            href={`#${sections[1].id}`}
           />
 
           <Technologies />
@@ -129,6 +131,7 @@ const Home: NextPage = () => {
             ref={el => (anchorElements.current[2] = el)}
             id={sections[2].id}
             className="relative -top-16 block"
+            href={`#${sections[2].id}`}
           />
 
           <div className="flex flex-col gap-8 h-full w-full p-4">
@@ -189,6 +192,7 @@ const Home: NextPage = () => {
               ref={el => (anchorElements.current[3] = el)}
               id={sections[3].id}
               className="relative -top-[calc(64px_+_4px)] block"
+              href={`#${sections[3].id}`}
             />
 
             <CallToAction />
