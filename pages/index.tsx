@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import { useTheme } from 'next-themes'
 import { css, tw } from 'twind'
 import { projects } from '@/common/data'
@@ -12,6 +11,7 @@ import {
   Technologies,
 } from '@/features'
 import { useIntersectionObserver } from '@/hooks'
+import { Head } from '@/layout'
 import { mergeRecords } from '@/utils'
 
 const sections = [
@@ -61,17 +61,10 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Hi, I'm a Frontend Web Developer | Stafford Rose</title>
-        <meta name="og:title" content="Hi, I'm a Frontend Web Developer" />
-        <meta name="og:description" content="I make things for the web." />
-        <meta
-          property="og:image"
-          content="https://staffordrose.com/images/og/default.png"
-        />
-        <meta name="twitter:creator" content="@staffordrose32" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <Head
+        title="Hi, I'm a Frontend Web Developer"
+        description="I make things for the web."
+      />
 
       <div
         aria-hidden="true"

@@ -1,37 +1,17 @@
-import { useEffect } from 'react'
-import Head from 'next/head'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { projects } from '@/common/data'
 import { Project } from '@/common/types'
 import { Button } from '@/components'
 import { ProjectDetail } from '@/features'
+import { Head } from '@/layout'
 
 const Projects: NextPage = () => {
   const router = useRouter()
 
-  useEffect(() => {
-    if (router.isReady && !router.query.p) {
-      router.push('/projects?p=address-book')
-    }
-  }, [])
-
   return (
     <>
-      <Head>
-        <title>Projects | Stafford Rose</title>
-        <meta name="og:title" content="My Projects" />
-        <meta
-          name="og:description"
-          content="My recent web devlopment projects."
-        />
-        <meta
-          property="og:image"
-          content="https://staffordrose.com/images/og/default.png"
-        />
-        <meta name="twitter:creator" content="@staffordrose32" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <Head title="Projects" description="My recent web devlopment projects." />
 
       <main className="min-h-[calc(100vh-64px)] mt-16 mb-32">
         <div className="h-auto w-full max-w-7xl mx-auto p-4">

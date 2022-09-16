@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import Head from 'next/head'
 import type { NextPage } from 'next'
 import { ResumeSection } from '@/features'
 import { resume } from '@/common/data'
 import { SlideUp } from '@/components'
 import { useIntersectionObserver } from '@/hooks'
+import { Head } from '@/layout'
 import { serializeHtml, mergeRecords } from '@/utils'
 
 const Resume: NextPage = () => {
@@ -32,17 +32,7 @@ const Resume: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>My Resume | Stafford Rose</title>
-        <meta name="og:title" content="My Resume" />
-        <meta name="og:description" content="My education and work history." />
-        <meta
-          property="og:image"
-          content="https://staffordrose.com/images/og/default.png"
-        />
-        <meta name="twitter:creator" content="@staffordrose32" />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+      <Head title="My Resume" description="My education and work history." />
 
       <main className="min-h-[calc(100vh-64px)] mt-16 mb-32">
         <div className="h-auto w-full max-w-7xl mx-auto p-4">
