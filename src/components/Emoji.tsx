@@ -7,7 +7,7 @@ interface EmojiProps {
 }
 
 const Emoji = memo(({ className, label, symbol }: EmojiProps) => (
-  <span role="img" aria-label={label} className={className}>
+  <span role="img" className={className} aria-label={label}>
     {String.fromCodePoint(symbol)}
   </span>
 ))

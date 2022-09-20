@@ -114,9 +114,9 @@ const ThemeToggle: FC = () => {
 
   return (
     <Button
-      aria-hidden="true"
       size="md"
       isSquare
+      aria-label="Toggle theme"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       <span className="block h-6 w-6">
@@ -170,9 +170,9 @@ const Header: FC = () => {
         `}
       >
         <Button
-          aria-label="View home page"
           size="lg"
           isSquare
+          aria-label="View home page"
           onClick={() => {
             if (router.pathname === '/') {
               window.scrollTo({ top: 0, behavior: 'smooth' })

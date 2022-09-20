@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import Image from 'next/image'
 import { BiLinkExternal } from 'react-icons/bi'
 import { FiGithub } from 'react-icons/fi'
 import { Project } from '@/common/types'
@@ -33,6 +34,7 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
                 ? {
                     id: 'site',
                     icon: BiLinkExternal,
+                    title: 'View live project',
                     href: url,
                   }
                 : {},
@@ -40,6 +42,7 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
                 ? {
                     id: 'source',
                     icon: FiGithub,
+                    title: 'View source code',
                     href: githubUrl,
                   }
                 : {},
@@ -49,17 +52,24 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
                 ({
                   id,
                   icon,
+                  title,
                   href,
                 }: {
                   id?: string
                   icon?: any
+                  title?: string
                   href?: string
                 }) => {
                   const Icon = icon
 
                   if (!href) {
                     return (
-                      <Button key={id} isSquare disabled={true}>
+                      <Button
+                        key={id}
+                        isSquare
+                        aria-label={title}
+                        disabled={true}
+                      >
                         <Icon className="h-6 w-6" />
                       </Button>
                     )
@@ -70,6 +80,7 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
                       key={id}
                       variant="button"
                       isSquare
+                      aria-label={title}
                       href={href}
                       openInNew
                     >
@@ -81,15 +92,20 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
           </div>
         </div>
 
-        {!!image?.src ? (
-          <img
-            className="h-auto w-full mb-2 rounded shadow-xl"
-            src={image.src}
-            alt={image.alt || title}
-          />
-        ) : (
-          <div style={{ aspectRatio: '3/2' }} />
-        )}
+        <div
+          className="h-auto w-full mb-2 rounded shadow-xl"
+          style={{ aspectRatio: '3/2' }}
+        >
+          {!!image?.src && (
+            <Image
+              src={image.src}
+              alt={image.alt || title}
+              width={936}
+              height={624}
+              priority={true}
+            />
+          )}
+        </div>
 
         {Array.isArray(description) &&
           description.length > 0 &&

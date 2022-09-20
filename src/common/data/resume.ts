@@ -38,7 +38,7 @@ const resume: ResumeSection[] = [
       {
         type: 'ul',
         props: {
-          className: 'flex flex-col gap-8 list-square',
+          className: 'flex flex-col gap-8',
         },
         children: [
           {
@@ -69,7 +69,7 @@ const resume: ResumeSection[] = [
                   {
                     type: 'ul',
                     props: {
-                      className: 'list-square list-inside',
+                      className: 'pl-4 list-square list-outside',
                     },
                     children: [
                       {
@@ -82,9 +82,14 @@ const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `group~link inline ${css`
-                                vertical-align: -2px;
-                              `}`,
+                              className: `
+                                group~link
+                                inline
+                                ${css`
+                                  vertical-align: -2px;
+                                `}
+                              `,
+                              'aria-label': `View Leisure Time Inc. customer portal`,
                               href: 'https://my.leisuretimeinc.com',
                               openInNew: true,
                             },
@@ -110,9 +115,14 @@ const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `group~link inline ${css`
-                                vertical-align: -2px;
-                              `}`,
+                              className: `
+                                group~link
+                                inline
+                                ${css`
+                                  vertical-align: -2px;
+                                `}
+                              `,
+                              'aria-label': `View Leisure Time Inc. employee dashboard`,
                               href: 'https://admin.leisuretimeinc.com',
                               openInNew: true,
                             },
@@ -138,9 +148,14 @@ const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `group~link inline ${css`
-                                vertical-align: -2px;
-                              `}`,
+                              className: `
+                                group~link
+                                inline
+                                ${css`
+                                  vertical-align: -2px;
+                                `}
+                              `,
+                              'aria-label': `View Leisure Time Inc. ecommerce store`,
                               href: 'https://shop.leisuretimeinc.com',
                               openInNew: true,
                             },
@@ -166,9 +181,14 @@ const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `group~link inline ${css`
-                                vertical-align: -2px;
-                              `}`,
+                              className: `
+                                group~link
+                                inline
+                                ${css`
+                                  vertical-align: -2px;
+                                `}
+                              `,
+                              'aria-label': `View Leisure Time Inc. main website`,
                               href: 'https://leisuretimeinc.com',
                               openInNew: true,
                             },
@@ -219,7 +239,7 @@ const resume: ResumeSection[] = [
                   {
                     type: 'ul',
                     props: {
-                      className: 'list-square list-inside',
+                      className: 'pl-4 list-square list-outside',
                     },
                     children: [
                       {
@@ -232,7 +252,7 @@ const resume: ResumeSection[] = [
                           {
                             type: 'ul',
                             props: {
-                              className: 'ml-6 list-square',
+                              className: 'pl-4 list-square list-outside',
                             },
                             children: [
                               {
@@ -291,7 +311,7 @@ const resume: ResumeSection[] = [
                   {
                     type: 'ul',
                     props: {
-                      className: 'list-square list-inside',
+                      className: 'pl-4 list-square list-outside',
                     },
                     children: [
                       {
@@ -341,7 +361,7 @@ const resume: ResumeSection[] = [
                   {
                     type: 'ul',
                     props: {
-                      className: 'list-square list-inside',
+                      className: 'pl-4 list-square list-outside',
                     },
                     children: [
                       {
@@ -383,7 +403,7 @@ const resume: ResumeSection[] = [
                   {
                     type: 'ul',
                     props: {
-                      className: 'list-square list-inside',
+                      className: 'pl-4 list-square list-outside',
                     },
                     children: [
                       {
@@ -440,7 +460,7 @@ const resume: ResumeSection[] = [
                   {
                     type: 'ul',
                     props: {
-                      className: 'list-square list-inside',
+                      className: 'pl-4 list-square list-outside',
                     },
                     children: [
                       { type: 'li', content: `Graduated May 2013` },
@@ -492,79 +512,108 @@ const resume: ResumeSection[] = [
         type: 'ResumeItemContent',
         children: [
           {
-            type: 'a',
+            type: 'ul',
             props: {
-              className: `group`,
-              href: `tel:18176942015`,
+              className:
+                'list-none w-full divide-y sm:divide-y-0 divide-navy-500/10',
             },
             children: [
               {
-                type: 'react-icon',
-                props: {
-                  className: `group-hover:text-yellow-500`,
-                },
-                component: BiPhone,
+                type: 'li',
+                children: [
+                  {
+                    type: 'a',
+                    props: {
+                      className: `group~link min-h-[48px] sm:min-h-0`,
+                      href: `tel:18176942015`,
+                    },
+                    children: [
+                      {
+                        type: 'react-icon',
+                        props: {
+                          className: `group~link-hover:text-yellow-500`,
+                        },
+                        component: BiPhone,
+                      },
+                      {
+                        type: 'span',
+                        content: `(817) 694-2015`,
+                      },
+                    ],
+                  },
+                ],
               },
               {
-                type: 'span',
-                content: `(817) 694-2015`,
-              },
-            ],
-          },
-          {
-            type: 'a',
-            props: {
-              className: `group`,
-              href: `mailto:hello@staffordrose.com`,
-            },
-            children: [
-              {
-                type: 'react-icon',
-                props: {
-                  className: `group-hover:text-yellow-500`,
-                },
-                component: BiEnvelope,
-              },
-              {
-                type: 'span',
-                content: `hello@staffordrose.com`,
-              },
-            ],
-          },
-          {
-            type: 'span',
-            props: {
-              className: `flex gap-1 items-center`,
-            },
-            children: [
-              {
-                type: 'react-icon',
-                component: BiBuildingHouse,
+                type: 'li',
+                children: [
+                  {
+                    type: 'a',
+                    props: {
+                      className: `group~link min-h-[48px] sm:min-h-0`,
+                      href: `mailto:hello@staffordrose.com`,
+                    },
+                    children: [
+                      {
+                        type: 'react-icon',
+                        props: {
+                          className: `group~link-hover:text-yellow-500`,
+                        },
+                        component: BiEnvelope,
+                      },
+                      {
+                        type: 'span',
+                        content: `hello@staffordrose.com`,
+                      },
+                    ],
+                  },
+                ],
               },
               {
-                type: 'span',
-                content: `Salt Lake City, UT`,
+                type: 'li',
+                children: [
+                  {
+                    type: 'span',
+                    props: {
+                      className: `flex gap-1 items-center min-h-[48px] sm:min-h-0`,
+                    },
+                    children: [
+                      {
+                        type: 'react-icon',
+                        component: BiBuildingHouse,
+                      },
+                      {
+                        type: 'span',
+                        content: `Salt Lake City, UT`,
+                      },
+                    ],
+                  },
+                ],
               },
-            ],
-          },
-          {
-            type: 'a',
-            props: {
-              className: `group`,
-              href: `https://github.com/staffordrose`,
-              openInNew: true,
-            },
-            children: [
               {
-                type: 'react-icon',
-                props: {
-                  className: `group-hover:text-yellow-500`,
-                },
-                component: FiGithub,
-              },
-              {
-                type: 'span',
-                content: `github.com/staffordrose`,
+                type: 'li',
+                children: [
+                  {
+                    type: 'a',
+                    props: {
+                      className: `group~link min-h-[48px] sm:min-h-0`,
+                      href: `https://github.com/staffordrose`,
+                      openInNew: true,
+                    },
+                    children: [
+                      {
+                        type: 'react-icon',
+                        props: {
+                          className: `group~link-hover:text-yellow-500`,
+                        },
+                        component: FiGithub,
+                      },
+                      {
+                        type: 'span',
+                        content: `github.com/staffordrose`,
+                      },
+                    ],
+                  },
+                ],
               },
             ],
           },
@@ -580,7 +629,7 @@ const resume: ResumeSection[] = [
       {
         type: 'ul',
         props: {
-          className: 'list-square list-inside',
+          className: 'pl-4 list-square list-outside',
         },
         children: [
           { type: 'li', content: `Teamwork` },

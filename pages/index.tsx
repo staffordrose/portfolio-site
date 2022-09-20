@@ -51,7 +51,9 @@ const Home: NextPage = () => {
   useEffect(() => {
     if (Array.isArray(sectionEntries) && sectionEntries.length) {
       const mappedEntries = sectionEntries.map(entry => ({
-        name: entry.target.children[0]?.id,
+        name:
+          Array.from(entry.target.children).find(c => c.tagName === 'A')?.id ||
+          '',
         value: entry.isIntersecting,
       }))
 
@@ -103,6 +105,7 @@ const Home: NextPage = () => {
             ref={el => (anchorElements.current[0] = el)}
             id={sections[0].id}
             className="relative -top-16 block"
+            aria-label={sections[0].name}
             href={`#${sections[0].id}`}
           />
 
@@ -117,6 +120,7 @@ const Home: NextPage = () => {
             ref={el => (anchorElements.current[1] = el)}
             id={sections[1].id}
             className="relative -top-16 block"
+            aria-label={sections[1].name}
             href={`#${sections[1].id}`}
           />
 
@@ -131,6 +135,7 @@ const Home: NextPage = () => {
             ref={el => (anchorElements.current[2] = el)}
             id={sections[2].id}
             className="relative -top-16 block"
+            aria-label={sections[2].name}
             href={`#${sections[2].id}`}
           />
 
@@ -167,6 +172,14 @@ const Home: NextPage = () => {
             `}
           `}
         >
+          <a
+            ref={el => (anchorElements.current[3] = el)}
+            id={sections[3].id}
+            className="relative -top-[calc(64px_+_4px)] block"
+            aria-label={sections[3].name}
+            href={`#${sections[3].id}`}
+          />
+
           <div
             className={`
               relative z-10
@@ -188,13 +201,6 @@ const Home: NextPage = () => {
               `}
             `}
           >
-            <a
-              ref={el => (anchorElements.current[3] = el)}
-              id={sections[3].id}
-              className="relative -top-[calc(64px_+_4px)] block"
-              href={`#${sections[3].id}`}
-            />
-
             <CallToAction />
           </div>
         </section>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { FC } from 'react'
+import Image from 'next/image'
 import { css } from 'twind'
 import { RiArrowRightFill } from 'react-icons/ri'
 import { technologies } from '@/common/data'
@@ -75,15 +76,19 @@ const ProjectGrid: FC<ProjectGridProps> = ({
                     justify === 'left' ? `pr-[6.667%]` : `pl-[6.667%]`
                   }`}
                 >
-                  {!!image?.src ? (
-                    <img
-                      className="h-auto w-full rounded shadow-xl"
-                      src={image.src}
-                      alt={image.alt || title}
-                    />
-                  ) : (
-                    <div style={{ aspectRatio: '3/2' }} />
-                  )}
+                  <div
+                    className="h-auto w-full rounded shadow-xl"
+                    style={{ aspectRatio: '3/2' }}
+                  >
+                    {!!image?.src && (
+                      <Image
+                        src={image.src}
+                        alt={image.alt || title}
+                        width={900}
+                        height={600}
+                      />
+                    )}
+                  </div>
 
                   {Array.isArray(technologyIds) && technologyIds.length > 0 && (
                     <div
@@ -124,6 +129,8 @@ const ProjectGrid: FC<ProjectGridProps> = ({
                                 <img
                                   src={image.src}
                                   alt={image.alt || technologyTitle}
+                                  width={80}
+                                  height={80}
                                 />
                               )}
                             </div>
