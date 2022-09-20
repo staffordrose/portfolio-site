@@ -80,8 +80,9 @@ const Link: FC<LinkProps> = ({
   const regEx = /^http/
 
   return regEx.test(href) ? (
-    <a
-      className={`
+    openInNew ? (
+      <a
+        className={`
         ${
           variant === 'button'
             ? `${buttonStyles(colorScheme)} ${
@@ -91,11 +92,27 @@ const Link: FC<LinkProps> = ({
         }
         ${className}
       `}
-      href={href}
-      rel="noopener"
-      target={openInNew ? '_blank' : undefined}
-      {...props}
-    />
+        href={href}
+        rel="noreferrer noopener"
+        target="_blank"
+        {...props}
+      />
+    ) : (
+      <a
+        className={`
+      ${
+        variant === 'button'
+          ? `${buttonStyles(colorScheme)} ${
+              isSquare ? squareButtonSizes[size] : buttonSizes[size]
+            }`
+          : `${inlineStyles(colorScheme)} ${inlineSizes[size]}`
+      }
+      ${className}
+    `}
+        href={href}
+        {...props}
+      />
+    )
   ) : (
     <NextLink href={href}>
       <a
