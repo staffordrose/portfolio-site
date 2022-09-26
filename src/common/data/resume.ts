@@ -16,17 +16,11 @@ const resume: ResumeSection[] = [
     children: [
       {
         type: 'p',
-        content: `Frontend web developer with 4+ years of experience designing and
-        building web applications. I am self-taught and worked as the
-        sole designer and developer of multiple user-facing React
-        applications.`,
+        content: `Frontend web developer with 4+ years of experience designing and building web applications. I am self-taught and worked as the sole designer and developer of multiple user-facing React applications.`,
       },
       {
         type: 'p',
-        content: `Working for Leisure Time Inc. in various capacities since 2014
-        has allowed me to explore my interests and find what I want to
-        do with my career. I'm seeking to join a frontend team where I
-        can make an impact and advance my skills as a developer.`,
+        content: `Working for Leisure Time Inc. in various capacities since 2014 has allowed me to explore my interests, discover my passion for web development, and gain valuable experience designing and developing JavaScript applications. I'm seeking to join a frontend team where I can make an impact and advance my skills as a developer.`,
       },
     ],
   },
@@ -60,11 +54,7 @@ const resume: ResumeSection[] = [
                     props: {
                       className: 'mb-2 italic',
                     },
-                    content: `Worked as sole designer and developer of hot tub/hearth
-                    product configurator, customer portal, employee dashboard,
-                    headless Shopify storefront, public website, and internal
-                    component library. Interfaced with ownership and
-                    co-workers to ensure the products met desired outcomes.`,
+                    content: `Worked as sole designer and developer of hot tub/hearth product configurator, customer portal, employee dashboard, headless Shopify storefront, public website, and internal component library. Interfaced with ownership and department heads to ensure the products met desired outcomes.`,
                   },
                   {
                     type: 'ul',
@@ -304,9 +294,7 @@ const resume: ResumeSection[] = [
                     props: {
                       className: 'mb-2 italic',
                     },
-                    content: `Worked for a few local businesses in Idaho, Montana, and
-                    Texas. More than 60% of my billable hours were for Leisure
-                    Time Inc.`,
+                    content: `Worked for a few local businesses in Idaho, Montana, and Texas. More than 60% of my billable hours were for Leisure Time Inc.`,
                   },
                   {
                     type: 'ul',
