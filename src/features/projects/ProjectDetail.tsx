@@ -93,7 +93,7 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
         </div>
 
         <div
-          className="h-auto w-full mb-2 rounded shadow-xl"
+          className="overflow-hidden h-auto w-full mb-2 rounded shadow-xl"
           style={{ aspectRatio: '3/2' }}
         >
           {!!image?.src && (

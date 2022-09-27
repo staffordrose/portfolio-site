@@ -77,7 +77,7 @@ const ProjectGrid: FC<ProjectGridProps> = ({
                   }`}
                 >
                   <div
-                    className="h-auto w-full rounded shadow-xl"
+                    className="overflow-hidden h-auto w-full rounded shadow-xl"
                     style={{ aspectRatio: '3/2' }}
                   >
                     {!!image?.src && (
