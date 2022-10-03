@@ -22,7 +22,9 @@ const ResumeSection: FC<ResumeSectionProps> = ({
         mb-8
       `}
     >
-      <h2 className="text-2xl text-navy-900 dark:text-white">{title}</h2>
+      <h2 className="text-2xl sm:text-3xl text-navy-900 dark:text-white">
+        {title}
+      </h2>
 
       <div className="flex flex-col gap-4 p-4 rounded-lg bg-(navy-100 dark:navy-800)">
         {children}

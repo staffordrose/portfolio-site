@@ -20,7 +20,7 @@ const resume: ResumeSection[] = [
       },
       {
         type: 'p',
-        content: `Working for Leisure Time Inc. in various capacities since 2014 has allowed me to explore my interests, discover my passion for web development, and gain valuable experience designing and developing JavaScript applications. I'm seeking to join a frontend team where I can make an impact and advance my skills as a developer.`,
+        content: `Working for Leisure Time Inc. in various capacities since 2014 has allowed me to explore my interests, discover my passion for web development, and gain valuable experience designing and developing JavaScript applications. After quitting Leisure Time, I took some time to begin learning technologies that would advance my career and make me a more well-rounded frontend dev. I'm seeking to join a frontend team where I can make an impact and continue to grow as a developer.`,
       },
     ],
   },
@@ -42,8 +42,8 @@ const resume: ResumeSection[] = [
                 type: 'ResumeItemHeading',
                 props: {
                   title: `Web Developer`,
-                  subtitle: `Leisure Time Inc. - Idaho Falls, ID  (remote from SLC, UT)`,
-                  timespan: `Apr 2018 - Feb 2022`,
+                  subtitle: `Leisure Time Inc. - Idaho Falls, ID`,
+                  timespan: `Jan 2018 - Feb 2022`,
                 },
               },
               {
@@ -54,7 +54,7 @@ const resume: ResumeSection[] = [
                     props: {
                       className: 'mb-2 italic',
                     },
-                    content: `Worked as sole designer and developer of hot tub/hearth product configurator, customer portal, employee dashboard, headless Shopify storefront, public website, and internal component library. Interfaced with ownership and department heads to ensure the products met desired outcomes.`,
+                    content: `Worked remotely as sole designer and developer of hot tub/hearth product configurator, customer portal, employee dashboard, headless Shopify storefront, public website, and internal component library. Interfaced with ownership and department heads to ensure the products met desired outcomes.`,
                   },
                   {
                     type: 'ul',
@@ -200,11 +200,11 @@ const resume: ResumeSection[] = [
                       },
                       {
                         type: 'li',
-                        content: `Built inbound/outbound email service using Cloud Run + Postmark`,
+                        content: `Developed inbound/outbound email service using Cloud Run + Postmark`,
                       },
                       {
                         type: 'li',
-                        content: `Built shared component library to unify design language of websites`,
+                        content: `Authored shared component library to unify design language of websites`,
                       },
                     ],
                   },
@@ -247,15 +247,105 @@ const resume: ResumeSection[] = [
                             children: [
                               {
                                 type: 'li',
-                                content: `Montana Fly Fishing Guides - Livingston, MT`,
+                                children: [
+                                  {
+                                    type: 'span',
+                                    content: `Montana Fly Fishing Guides - Livingston, MT `,
+                                  },
+                                  {
+                                    type: 'a',
+                                    props: {
+                                      className: `
+                                        group~link
+                                        inline
+                                        ${css`
+                                          vertical-align: -2px;
+                                        `}
+                                      `,
+                                      'aria-label': `View Montana Fly Fishing Guides website`,
+                                      href: 'https://www.montanaflyfishingguides.com',
+                                      openInNew: true,
+                                    },
+                                    children: [
+                                      {
+                                        type: 'react-icon',
+                                        props: {
+                                          className:
+                                            'group~link-hover:text-orange-500',
+                                        },
+                                        component: BiLinkExternal,
+                                      },
+                                    ],
+                                  },
+                                ],
                               },
                               {
                                 type: 'li',
-                                content: `Fly Fish Rockport - Rockport, TX`,
+                                children: [
+                                  {
+                                    type: 'span',
+                                    content: `Fly Fish Rockport - Rockport, TX `,
+                                  },
+                                  {
+                                    type: 'a',
+                                    props: {
+                                      className: `
+                                      group~link
+                                      inline
+                                      ${css`
+                                        vertical-align: -2px;
+                                      `}
+                                    `,
+                                      'aria-label': `View Fly Fish Rockport website`,
+                                      href: 'https://www.flyfishrockport.com',
+                                      openInNew: true,
+                                    },
+                                    children: [
+                                      {
+                                        type: 'react-icon',
+                                        props: {
+                                          className:
+                                            'group~link-hover:text-orange-500',
+                                        },
+                                        component: BiLinkExternal,
+                                      },
+                                    ],
+                                  },
+                                ],
                               },
                               {
                                 type: 'li',
-                                content: `Alpine Fitness - Alpine, UT`,
+                                children: [
+                                  {
+                                    type: 'span',
+                                    content: `Leisure Time Inc. - Idaho Falls, ID `,
+                                  },
+                                  {
+                                    type: 'a',
+                                    props: {
+                                      className: `
+                                      group~link
+                                      inline
+                                      ${css`
+                                        vertical-align: -2px;
+                                      `}
+                                    `,
+                                      'aria-label': `View Leisure Time Inc. promotional video`,
+                                      href: 'https://www.youtube.com/watch?v=wAkHvzqbdOo',
+                                      openInNew: true,
+                                    },
+                                    children: [
+                                      {
+                                        type: 'react-icon',
+                                        props: {
+                                          className:
+                                            'group~link-hover:text-orange-500',
+                                        },
+                                        component: BiLinkExternal,
+                                      },
+                                    ],
+                                  },
+                                ],
                               },
                             ],
                           },
@@ -263,11 +353,41 @@ const resume: ResumeSection[] = [
                       },
                       {
                         type: 'li',
-                        content: `Filmed & edited local TV commercial for Leisure Time Inc.`,
+                        content: `Filmed & edited local TV commercial for Leisure Time Inc. - Idaho Falls, ID`,
                       },
                       {
                         type: 'li',
-                        content: `Filmed & edited weddings in Utah & Texas`,
+                        children: [
+                          {
+                            type: 'span',
+                            content: `Filmed & edited weddings in Utah & Texas `,
+                          },
+
+                          {
+                            type: 'a',
+                            props: {
+                              className: `
+                              group~link
+                              inline
+                              ${css`
+                                vertical-align: -2px;
+                              `}
+                            `,
+                              'aria-label': `View Stafford Rose Media Vimeo channel`,
+                              href: 'https://vimeo.com/staffordrosemedia',
+                              openInNew: true,
+                            },
+                            children: [
+                              {
+                                type: 'react-icon',
+                                props: {
+                                  className: 'group~link-hover:text-orange-500',
+                                },
+                                component: BiLinkExternal,
+                              },
+                            ],
+                          },
+                        ],
                       },
                     ],
                   },
@@ -339,7 +459,7 @@ const resume: ResumeSection[] = [
                 type: 'ResumeItemHeading',
                 props: {
                   title: `Internet Marketing Guru`,
-                  subtitle: `High 5 Promotions - Austin, TX (remote from Provo, UT)`,
+                  subtitle: `High 5 Promotions - Austin, TX`,
                   timespan: `May 2013 - Apr 2014`,
                 },
               },
@@ -381,7 +501,7 @@ const resume: ResumeSection[] = [
                 type: 'ResumeItemHeading',
                 props: {
                   title: `Internet Marketing Intern`,
-                  subtitle: `High 5 Promotions - Austin, TX (remote from San Marcos, TX)`,
+                  subtitle: `High 5 Promotions - Austin, TX`,
                   timespan: `Oct 2012 - May 2013`,
                 },
               },
@@ -457,33 +577,13 @@ const resume: ResumeSection[] = [
                         type: 'li',
                         content: `American Marketing Association National Case Competition Team (2nd place)`,
                       },
+                      {
+                        type: 'li',
+                        content: `Completed general studies at Weatherford College & Austin Community College prior to attending TXST`,
+                      },
                     ],
                   },
                 ],
-              },
-            ],
-          },
-          {
-            type: 'ResumeItem',
-            children: [
-              {
-                type: 'ResumeItemHeading',
-                props: {
-                  title: `Austin Community College`,
-                  timespan: `Fall 2010 - Spring 2011`,
-                },
-              },
-            ],
-          },
-          {
-            type: 'ResumeItem',
-            children: [
-              {
-                type: 'ResumeItemHeading',
-                props: {
-                  title: `Weatherford College`,
-                  timespan: `Fall 2007, Spring 2010`,
-                },
               },
             ],
           },
@@ -492,9 +592,51 @@ const resume: ResumeSection[] = [
     ],
   },
   {
+    id: 'skills',
+    title: 'Skills',
+    animationDelay: 300,
+    children: [
+      {
+        type: 'ul',
+        props: {
+          className: 'pl-4 list-square list-outside',
+        },
+        children: [
+          { type: 'li', content: `Detail-oriented` },
+          { type: 'li', content: `Problem solving` },
+          { type: 'li', content: `Teamwork` },
+          { type: 'li', content: `Self-management` },
+          { type: 'li', content: `Communication skills` },
+          { type: 'li', content: `Strategic planning` },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'interests',
+    title: 'Interests',
+    animationDelay: 450,
+    children: [
+      {
+        type: 'ul',
+        props: {
+          className: 'pl-4 list-square list-outside',
+        },
+        children: [
+          { type: 'li', content: `Canyoneering` },
+          { type: 'li', content: `Cycling` },
+          { type: 'li', content: `Fly fishing` },
+          { type: 'li', content: `Hiking` },
+          { type: 'li', content: `Camping` },
+          { type: 'li', content: `Skiing` },
+        ],
+      },
+    ],
+  },
+  {
     id: 'contact',
     title: 'Contact',
-    animationDelay: 300,
+    animationDelay: 450,
     children: [
       {
         type: 'ResumeItemContent',
@@ -605,27 +747,6 @@ const resume: ResumeSection[] = [
               },
             ],
           },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'skills',
-    title: 'Skills',
-    animationDelay: 450,
-    children: [
-      {
-        type: 'ul',
-        props: {
-          className: 'pl-4 list-square list-outside',
-        },
-        children: [
-          { type: 'li', content: `Teamwork` },
-          { type: 'li', content: `Self-management` },
-          { type: 'li', content: `Communication skills` },
-          { type: 'li', content: `Problem solving` },
-          { type: 'li', content: `Attention to detail` },
-          { type: 'li', content: `Strategic planning` },
         ],
       },
     ],

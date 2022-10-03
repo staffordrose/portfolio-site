@@ -33,8 +33,11 @@ const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
     `}
   >
     <h3
-      className={css`
-        grid-area: title;
+      className={`
+        text-xl sm:text-2xl
+        ${css`
+          grid-area: title;
+        `}
       `}
     >
       {title}
@@ -43,7 +46,7 @@ const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
     {!!subtitle && (
       <h4
         className={`
-          italic
+        text-sm sm:text-base italic
           ${css`
             grid-area: subtitle;
           `}
@@ -56,7 +59,7 @@ const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
     {!!timespan && (
       <span
         className={`
-          font-ibm-plex-mono text-lg
+          font-ibm-plex-mono text-base sm:text-lg
           ${css`
             grid-area: timespan;
           `}
