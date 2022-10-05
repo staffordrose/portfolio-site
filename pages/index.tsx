@@ -64,7 +64,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head
-        title="Hi, I'm a Frontend Web Developer"
+        title="Hi, I'm a Front-end Web Developer"
         description="I make things for the web."
       />
 

@@ -45,7 +45,7 @@ const Introduction: FC<IntroductionProps> = ({ theme, isVisible }) => {
                 </span>
 
                 <span className="relative z-10 block text-(navy-800 dark:navy-100 4xl sm:5xl md:6xl xl:7xl)">
-                  Frontend{' '}
+                  Front-end{' '}
                 </span>
 
                 <span className="relative z-10 block text-(navy-800 dark:navy-100 4xl sm:5xl md:6xl xl:7xl)">

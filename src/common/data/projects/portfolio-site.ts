@@ -113,7 +113,7 @@ export const portfolioSite: Project = {
     },
     {
       type: 'p',
-      content: `After quitting my previous job, I took some time to begin learning technologies that would advance my career and make me a more well-rounded frontend dev. I chose to use my portfolio site to apply the concepts I would be learning, so I built the site in TypeScript, designed it with Tailwind CSS, and developed a hero animation with Three.js and GreenSock.`,
+      content: `After quitting my previous job, I took some time to begin learning technologies that would advance my career and make me a more well-rounded front-end dev. I chose to use my portfolio site to apply the concepts I would be learning, so I built the site in TypeScript, designed it with Tailwind CSS, and developed a hero animation with Three.js and GreenSock.`,
     },
     {
       type: 'h4',

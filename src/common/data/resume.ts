@@ -16,11 +16,11 @@ const resume: ResumeSection[] = [
     children: [
       {
         type: 'p',
-        content: `Frontend web developer with 4+ years of experience designing and building web applications. I am self-taught and worked as the sole designer and developer of multiple user-facing React applications.`,
+        content: `Front-end web developer with 4+ years of experience designing and building web applications. I am self-taught and worked as the sole designer and developer of multiple user-facing React applications.`,
       },
       {
         type: 'p',
-        content: `Working for Leisure Time Inc. in various capacities since 2014 has allowed me to explore my interests, discover my passion for web development, and gain valuable experience designing and developing JavaScript applications. After quitting Leisure Time, I took some time to begin learning technologies that would advance my career and make me a more well-rounded frontend dev. I'm seeking to join a frontend team where I can make an impact and continue to grow as a developer.`,
+        content: `Working for Leisure Time Inc. in various capacities since 2014 has allowed me to explore my interests, discover my passion for web development, and gain valuable experience designing and developing JavaScript applications. After quitting Leisure Time, I took some time to begin learning technologies that would advance my career and make me a more well-rounded front-end dev. I'm seeking to join a front-end team where I can make an impact and continue to grow as a developer.`,
       },
     ],
   },

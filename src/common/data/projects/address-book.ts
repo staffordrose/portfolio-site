@@ -4,8 +4,7 @@ export const addressBook: Project = {
   id: 'address-book',
   // url: 'https://addressbook.staffordrose.com', // FIXME:
   url: '',
-  // githubUrl: 'https://github.com/staffordrose/address-book', // FIXME:
-  githubUrl: '',
+  githubUrl: 'https://github.com/staffordrose/address-book',
   image: { src: '/images/projects/address-book.png', alt: '' },
   title: 'Address Book',
   flag: 'Under Development',

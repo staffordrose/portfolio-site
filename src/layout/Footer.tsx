@@ -71,7 +71,7 @@ const Footer: FC = () => {
 
           <div className="relative z-10">
             <h4>Stafford Rose</h4>
-            <h5 className="text-base">Frontend Web Developer</h5>
+            <h5 className="text-base">Front-end Web Developer</h5>
             <h6 className="text-sm">Salt Lake City, UT</h6>
 
             <ul className="flex flex-row justify-start sm:(flex-col items-start) mt-1 divide-x sm:divide-x-0 divide-navy-500/10">

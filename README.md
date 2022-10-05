@@ -1,6 +1,6 @@
 # [Portfolio Site](https://staffordrose.com) &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-This is the source code for my frontend web developer portfolio site.
+This is the source code for my front-end web developer portfolio site.
 
 It is built in [TypeScript](https://www.typescriptlang.org/) with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [three.js](https://threejs.org/).
 
