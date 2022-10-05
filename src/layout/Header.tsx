@@ -32,30 +32,27 @@ const Nav: FC<NavProps> = ({ router }) => {
 
   const prevMarker = usePrevious(marker)
 
-  const updateMarker = useCallback(
-    slug => {
-      if (!slug) {
-        setMarker({
-          width: 0,
-          offsetLeft: 0,
-        })
-        return
-      }
-
-      const pageIndex = pages.findIndex(p => p.id === slug)
-      const element = linkElements.current[pageIndex]
-
-      if (!element) return
-
+  const updateMarker = useCallback(slug => {
+    if (!slug) {
       setMarker({
-        width: element.clientWidth,
-        offsetLeft: element.offsetLeft,
+        width: 0,
+        offsetLeft: 0,
       })
-    },
-    [pages, linkElements.current],
-  )
+      return
+    }
 
-  useEffect(() => updateMarker(slug), [slug])
+    const pageIndex = pages.findIndex(p => p.id === slug)
+    const element = linkElements.current[pageIndex]
+
+    if (!element) return
+
+    setMarker({
+      width: element.clientWidth,
+      offsetLeft: element.offsetLeft,
+    })
+  }, [])
+
+  useEffect(() => updateMarker(slug), [updateMarker, slug])
 
   return (
     <nav className="relative h-full">
