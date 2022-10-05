@@ -7,7 +7,7 @@ const CallToAction: FC = () => {
     <div
       className={`
         flex flex-col gap-8 justify-center items-center
-        h-full min-h-[calc(50vh_-_8px)] w-full max-w-7xl mx-auto p-4
+        h-full min-h-[calc(50vh_-_8px)] w-full max-w-7xl mx-auto px-4 py-16
         text-center
       `}
     >

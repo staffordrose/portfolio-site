@@ -34,7 +34,7 @@ const Resume: NextPage = () => {
     <>
       <Head title="My Resume" description="My education and work history." />
 
-      <main className="min-h-[calc(100vh-64px)] mt-16 mb-32">
+      <main className="min-h-[calc(100vh_-_64px)] mt-16 mb-32">
         <div className="h-auto w-full max-w-7xl mx-auto p-4">
           <h1 className="my-8 md:my-12">Resume</h1>
 

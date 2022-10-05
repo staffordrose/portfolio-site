@@ -71,7 +71,7 @@ const Home: NextPage = () => {
       <div
         aria-hidden="true"
         className={`
-          fixed z-50 bottom-[calc(20vh-80px)] left-[calc(50%-680px)]
+          fixed z-50 bottom-[calc(20vh_-_80px)] left-[calc(50%_-_680px)]
           ${css`
             display: none;
 
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
 
         <section
           ref={el => (sectionElements.current[1] = el)}
-          className="h-[calc(100vh-64px)] w-full mb-16"
+          className="min-h-[calc(100vh_-_64px)] w-full mb-16"
         >
           <a
             ref={el => (anchorElements.current[1] = el)}
@@ -129,7 +129,7 @@ const Home: NextPage = () => {
 
         <section
           ref={el => (sectionElements.current[2] = el)}
-          className="min-h-[calc(100vh-64px)] w-full max-w-7xl mx-auto mb-24"
+          className="min-h-[calc(100vh_-_64px)] w-full max-w-7xl mx-auto mb-24"
         >
           <a
             ref={el => (anchorElements.current[2] = el)}

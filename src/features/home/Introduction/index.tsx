@@ -41,7 +41,7 @@ const Introduction: FC<IntroductionProps> = ({ theme, isVisible }) => {
             <SlideUp>
               <h1>
                 <span className="block text-(navy-900 dark:white xl sm:2xl xl:3xl)">
-                  Hi <Emoji symbol={0x1f44b} />, I&#39;m Stafford Rose a{' '}
+                  Hi <Emoji symbol={0x1f44b} />, I&apos;m Stafford Rose a{' '}
                 </span>
 
                 <span className="relative z-10 block text-(navy-800 dark:navy-100 4xl sm:5xl md:6xl xl:7xl)">

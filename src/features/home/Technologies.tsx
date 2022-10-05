@@ -15,7 +15,8 @@ const Technologies: FC = () => {
   return (
     <div
       className={`
-        relative z-10 overflow-hidden h-full w-full
+        relative z-10 overflow-hidden
+        h-full w-full
         bg-gradient-to-br from-(navy-100 dark:navy-900) to-(navy-50 dark:navy-800)
         after:(bg-(svg-navy-100 dark:svg-navy-800))
         ${css`
@@ -81,7 +82,7 @@ const Technologies: FC = () => {
         className={`
           relative z-10
           flex flex-col gap-10 justify-center items-center
-          h-full w-full max-w-7xl mx-auto px-4 py-16
+          min-h-[calc(100vh_-_64px)] w-full max-w-7xl mx-auto px-4 py-16
         `}
       >
         <h2
