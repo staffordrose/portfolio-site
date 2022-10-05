@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useIsomorphicLayoutEffect(() => injectGlobalStyles(), [])
 
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       <Header />
       <Component {...pageProps} />
       <Footer />
