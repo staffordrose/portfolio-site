@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import { useTheme } from 'next-themes'
 import { css, tw } from 'twind'
 import { projects } from '@/common/data'
+import { mergeRecords } from '@/common/utils'
 import {
   Introduction,
   ProjectGrid,
@@ -12,7 +13,6 @@ import {
 } from '@/features'
 import { useIntersectionObserver } from '@/hooks'
 import { Head } from '@/layout'
-import { mergeRecords } from '@/utils'
 
 const sections = [
   {

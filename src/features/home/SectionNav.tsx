@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { FC, MutableRefObject } from 'react'
-import { mergeRecords } from '@/utils'
+import { mergeRecords } from '@/common/utils'
 
 interface SectionNavProps {
   sections: Array<{ id: string; name: string }>

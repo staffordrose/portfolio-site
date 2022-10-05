@@ -1,6 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
-
-import { throttle } from '@/utils'
+import { throttle } from '@/common/utils'
 
 const useIsomorphicLayoutEffect =
   typeof window !== 'undefined' ? useLayoutEffect : useEffect

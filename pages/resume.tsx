@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import type { NextPage } from 'next'
 import { ResumeSection } from '@/features'
 import { resume } from '@/common/data'
+import { serializeHtml, mergeRecords } from '@/common/utils'
 import { SlideUp } from '@/components'
 import { useIntersectionObserver } from '@/hooks'
 import { Head } from '@/layout'
-import { serializeHtml, mergeRecords } from '@/utils'
 
 const Resume: NextPage = () => {
   const sectionElements = useRef<(HTMLElement | null)[]>([])

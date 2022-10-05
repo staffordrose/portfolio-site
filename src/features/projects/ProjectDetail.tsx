@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { BiLinkExternal } from 'react-icons/bi'
 import { FiGithub } from 'react-icons/fi'
 import { Project } from '@/common/types'
+import { serializeHtml } from '@/common/utils'
 import { Button, Chip, Link, SlideUp } from '@/components'
-import { serializeHtml } from '@/utils'
 
 interface ProjectDetailProps {
   project: Project

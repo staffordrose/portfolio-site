@@ -3,8 +3,8 @@ import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import install from '@twind/with-next/app'
 import config from '../twind.config'
+import { injectGlobalStyles } from '@/common/styles'
 import { Header, Footer } from '@/layout'
-import { injectGlobalStyles } from '@/styles'
 
 const useIsomorphicLayoutEffect =
   typeof window !== 'undefined' ? useLayoutEffect : useEffect

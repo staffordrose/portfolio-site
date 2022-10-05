@@ -5,9 +5,9 @@ import { css } from 'twind'
 import { RiArrowRightFill } from 'react-icons/ri'
 import { technologies } from '@/common/data'
 import { Project } from '@/common/types'
+import { mergeRecords, serializeHtmlToPlainText } from '@/common/utils'
 import { Chip, Link, ScaleIn, SlideUp } from '@/components'
 import { useIntersectionObserver } from '@/hooks'
-import { mergeRecords, serializeHtmlToPlainText } from '@/utils'
 
 interface ProjectGridProps {
   projects: Project[]
