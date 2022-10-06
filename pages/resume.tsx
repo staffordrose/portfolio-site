@@ -53,7 +53,7 @@ const Resume: NextPage = () => {
                 )
               `}
               aria-label="Download Resume PDF"
-              href="/documents/resume.pdf"
+              href="/documents/Stafford Rose Resume.pdf"
               download="Stafford Rose Resume.pdf"
             >
               <RiFileDownloadLine className="h-7 w-7" />
