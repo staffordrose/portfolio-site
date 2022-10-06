@@ -40,7 +40,7 @@ const squareButtonSizes = {
 
 const inlineStyles = (colorScheme: 'navy' | 'yellow-orange-red') => `
   inline-flex gap-1 items-center
-  font-semibold
+  font-medium
   text-(navy-600 dark:navy-300)
   hover:(
     text-(transparent dark:transparent)

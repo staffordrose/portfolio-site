@@ -375,7 +375,7 @@ const MobileWireframe: FC<MobileWireframeProps> = ({ theme }) => {
               variant="solid"
               onClick={() => setPlaying(true)}
             >
-              <BiPlay size="8rem" />
+              <BiPlay className="h-12 w-12" />
             </Button>
           </div>
         </div>

@@ -17,10 +17,7 @@ const ResumeSection: FC<ResumeSectionProps> = ({
     <section
       ref={innerRef}
       id={id}
-      className={`
-        grid grid-cols-[1fr] gap-6 lg:grid-cols-[192px_1fr] xl:grid-cols-[256px_1fr] content-start items-start
-        mb-8
-      `}
+      className="grid grid-cols-([1fr] lg:[192px_1fr] xl:[256px_1fr]) gap-6 content-start items-start"
     >
       <h2 className="text-2xl sm:text-3xl text-navy-900 dark:text-white">
         {title}

@@ -2,7 +2,7 @@ import { Project } from '@/common/types'
 
 export const nbaReplay: Project = {
   id: 'nba-replay',
-  url: 'https://nbareplay.staffordrose.com',
+  url: 'https://nbareplay.staffordrose.com/2021',
   githubUrl: 'https://github.com/staffordrose/nba-replay',
   image: { src: '/images/projects/nba-replay.png', alt: 'NBA Replay' },
   title: 'NBA Replay',

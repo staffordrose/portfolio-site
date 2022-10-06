@@ -27,11 +27,11 @@ const CallToAction: FC = () => {
       >
         <RiArrowRightFill
           className={`
+            h-7 w-7
             -translate-x-3
             transition-transform duration-300 ease-in-out
             group-hover:translate-x-0
           `}
-          size="1.75rem"
         />
         View Resume
       </Link>

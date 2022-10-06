@@ -176,10 +176,10 @@ const ProjectGrid: FC<ProjectGridProps> = ({
                     >
                       <RiArrowRightFill
                         className={`
+                          h-5 w-5
                           -translate-x-2 transition-transform duration-300 ease-in-out
                           group-hover:translate-x-0
                         `}
-                        size="1.25rem"
                       />
                       View Project
                     </Link>

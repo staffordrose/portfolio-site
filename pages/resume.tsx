@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import type { NextPage } from 'next'
-import { ResumeSection } from '@/features'
+import { RiFileDownloadLine } from 'react-icons/ri'
 import { resume } from '@/common/data'
 import { serializeHtml, mergeRecords } from '@/common/utils'
 import { SlideUp } from '@/components'
+import { ResumeSection } from '@/features'
 import { useIntersectionObserver } from '@/hooks'
 import { Head } from '@/layout'
 
@@ -35,8 +36,32 @@ const Resume: NextPage = () => {
       <Head title="My Resume" description="My education and work history." />
 
       <main className="min-h-[calc(100vh_-_64px)] mt-16 mb-32">
-        <div className="h-auto w-full max-w-7xl mx-auto p-4">
-          <h1 className="my-8 md:my-12">Resume</h1>
+        <div className="grid gap-8 h-auto w-full max-w-7xl mx-auto p-4">
+          <div className="flex justify-between items-center w-full my-8 md:my-12">
+            <h1>Resume</h1>
+
+            <a
+              className={`
+                overflow-hidden
+                inline-flex gap-3 justify-center items-center
+                h-12 w-12 sm:(w-auto px-4) border border-solid border-white/[0.025] rounded-sm
+                font-ibm-plex-mono text-(lg navy-800 dark:navy-100)
+                bg-gradient-to-br from-(navy-600/25 dark:navy-500/25) to-(navy-400/25 dark:navy-300/25)
+                cursor-pointer
+                hover:(
+                  from-(navy-800/25 dark:navy-300/25) to-(navy-600/25 dark:navy-100/25)
+                )
+              `}
+              aria-label="Download Resume PDF"
+              href="/documents/resume.pdf"
+              download="Stafford Rose Resume.pdf"
+            >
+              <RiFileDownloadLine className="h-7 w-7" />
+              <span className="hidden invisible sm:(block visible)">
+                Download
+              </span>
+            </a>
+          </div>
 
           {resume
             .slice(0, 3)
@@ -60,7 +85,7 @@ const Resume: NextPage = () => {
               </SlideUp>
             ))}
 
-          <div className="grid grid-cols-[1fr] md:(grid-cols-[1fr_1fr] gap-8) w-full">
+          <div className="grid grid-cols-([1fr] md:[1fr_1fr]) gap-8 w-full">
             {resume
               .slice(3)
               .map(({ id, title, animationDelay, children }, i) => (

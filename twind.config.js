@@ -36,6 +36,7 @@ export default defineConfig({
       },
       fontFamily: {
         'ibm-plex-mono': ['"IBM Plex Mono"', 'monospace'],
+        'helvetica-neue': ['"Helvetica Neue"', 'ui-sans-serif', 'sans-serif'],
       },
       listStyleType: {
         square: 'square',

@@ -108,12 +108,22 @@ export const portfolioSite: Project = {
       ],
     },
     {
+      type: 'a',
+      props: {
+        id: 'learning-technologies',
+        className: 'relative -top-28 block h-0 w-0 -mb-4',
+        'aria-label': 'Learning New Technologies',
+        href: '/projects?p=portfolio-site#learning-technologies',
+      },
+      content: '',
+    },
+    {
       type: 'h3',
       content: `Learning New Technologies`,
     },
     {
       type: 'p',
-      content: `After quitting my previous job, I took some time to begin learning technologies that would advance my career and make me a more well-rounded front-end dev. I chose to use my portfolio site to apply the concepts I would be learning, so I built the site in TypeScript, designed it with Tailwind CSS, and developed a hero animation with Three.js and GreenSock.`,
+      content: `After my departure from Leisure Time Inc., I took some time to begin learning technologies that would advance my career and make me a more well-rounded front-end dev. I chose to use my portfolio site to apply the concepts I would be learning, so I built the site in TypeScript, designed it with Tailwind CSS, and developed a hero animation with Three.js and GreenSock.`,
     },
     {
       type: 'h4',

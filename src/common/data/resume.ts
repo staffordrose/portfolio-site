@@ -16,11 +16,27 @@ const resume: ResumeSection[] = [
     children: [
       {
         type: 'p',
-        content: `Front-end web developer with 4+ years of experience designing and building web applications. I am self-taught and worked as the sole designer and developer of multiple user-facing React applications.`,
+        content: `Front-end web developer with 4+ years of experience building web applications. I am self-taught and worked as the sole designer and developer of multiple user-facing React applications.`,
       },
       {
         type: 'p',
-        content: `Working for Leisure Time Inc. in various capacities since 2014 has allowed me to explore my interests, discover my passion for web development, and gain valuable experience designing and developing JavaScript applications. After quitting Leisure Time, I took some time to begin learning technologies that would advance my career and make me a more well-rounded front-end dev. I'm seeking to join a front-end team where I can make an impact and continue to grow as a developer.`,
+        children: [
+          {
+            type: 'span',
+            content: `The years I spent with Leisure Time Inc. were incredible and illuminating. I explored my interests, discovered my passion for web development, and gained valuable experience designing and developing JavaScript applications. However, after years as a sole programmer, I felt that I would benefit from joining an established dev team. After planning my departure with management and training my replacement, I left Leisure Time and `,
+          },
+          {
+            type: 'a',
+            props: {
+              href: '/projects?p=portfolio-site#learning-technologies',
+            },
+            content: `learned technologies`,
+          },
+          {
+            type: 'span',
+            content: ` that I used to build my portfolio and become a more well-rounded front-end dev. I'm now seeking to join an engineering team where I can make an impact and continue to grow as a developer.`,
+          },
+        ],
       },
     ],
   },
@@ -166,7 +182,7 @@ const resume: ResumeSection[] = [
                         children: [
                           {
                             type: 'span',
-                            content: `Migrated WordPress site to Next.js + Prismic `,
+                            content: `Migrated WordPress site to Next.js & Prismic `,
                           },
                           {
                             type: 'a',
@@ -200,7 +216,7 @@ const resume: ResumeSection[] = [
                       },
                       {
                         type: 'li',
-                        content: `Developed inbound/outbound email service using Cloud Run + Postmark`,
+                        content: `Developed inbound/outbound email service using Cloud Run & Postmark`,
                       },
                       {
                         type: 'li',
@@ -572,14 +588,14 @@ const resume: ResumeSection[] = [
                     },
                     children: [
                       { type: 'li', content: `Graduated May 2013` },
-                      { type: 'li', content: `Texas State GPA: 3.92` },
+                      { type: 'li', content: `Texas State GPA: 3.9/4.0` },
                       {
                         type: 'li',
                         content: `American Marketing Association National Case Competition Team (2nd place)`,
                       },
                       {
                         type: 'li',
-                        content: `Completed general studies at Weatherford College & Austin Community College prior to attending TXST`,
+                        content: `Completed generals at Weatherford College & Austin Community College prior to attending TXST`,
                       },
                     ],
                   },
