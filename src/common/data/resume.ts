@@ -75,7 +75,7 @@ const resume: ResumeSection[] = [
                   {
                     type: 'ul',
                     props: {
-                      className: 'pl-4 list-square list-outside',
+                      className: 'mb-2 pl-4 list-square list-outside',
                     },
                     children: [
                       {
@@ -223,6 +223,13 @@ const resume: ResumeSection[] = [
                         content: `Authored shared component library to unify design language of websites`,
                       },
                     ],
+                  },
+                  {
+                    type: 'chip',
+                    props: {
+                      colorScheme: 'navy',
+                    },
+                    content: `Letter of Recommendation available upon request`,
                   },
                 ],
               },

@@ -83,15 +83,15 @@ const Link: FC<LinkProps> = ({
     openInNew ? (
       <a
         className={`
-        ${
-          variant === 'button'
-            ? `${buttonStyles(colorScheme)} ${
-                isSquare ? squareButtonSizes[size] : buttonSizes[size]
-              }`
-            : `${inlineStyles(colorScheme)} ${inlineSizes[size]}`
-        }
-        ${className}
-      `}
+          ${
+            variant === 'button'
+              ? `${buttonStyles(colorScheme)} ${
+                  isSquare ? squareButtonSizes[size] : buttonSizes[size]
+                }`
+              : `${inlineStyles(colorScheme)} ${inlineSizes[size]}`
+          }
+          ${className}
+        `}
         href={href}
         rel="noreferrer noopener"
         target="_blank"
