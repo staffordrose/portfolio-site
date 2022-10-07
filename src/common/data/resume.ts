@@ -23,7 +23,7 @@ const resume: ResumeSection[] = [
         children: [
           {
             type: 'span',
-            content: `The years I spent with Leisure Time Inc. were incredible and illuminating. I explored my interests, discovered my passion for web development, and gained valuable experience designing and developing JavaScript applications. However, after years as a sole programmer, I felt that I would benefit from joining an established dev team. After planning my departure with management and training my replacement, I left Leisure Time and `,
+            content: `The years I spent with Leisure Time Inc. were incredible and illuminating. I explored my interests, discovered my passion for web development, and gained valuable experience designing and developing JavaScript applications. However, after years as a solo programmer, I felt that I would benefit from joining an established dev team. After planning my departure with management and training my replacement, I left Leisure Time and `,
           },
           {
             type: 'a',
