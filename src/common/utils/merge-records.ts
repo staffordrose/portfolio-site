@@ -5,17 +5,19 @@ interface Obj {
   value: any
 }
 
+type KeyValueDict = Record<string, any>
+
 // Convert to key value dictionary or object
-const convertToKeyValueDict = (arrayObj: Array<Obj>) => {
-  const val: { [key: string]: any } = {}
+const convertToKeyValueDict = (arrayObj: Obj[]): KeyValueDict => {
+  const val: KeyValueDict = {}
   arrayObj.forEach(obj => {
     val[obj.name] = obj.value
   })
   return val
 }
 
-// update or merge array
-const mergeRecords = (a1: Array<Obj>, a2: Array<Obj>) => {
+// Update or merge array
+const mergeRecords = (a1: Obj[], a2: Obj[]) => {
   const obj1 = convertToKeyValueDict(a1)
   const obj2 = convertToKeyValueDict(a2)
   // Note: Spread operator with objects used here

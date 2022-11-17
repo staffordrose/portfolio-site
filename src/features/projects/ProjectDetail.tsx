@@ -2,9 +2,17 @@ import type { FC } from 'react'
 import Image from 'next/image'
 import { BiLinkExternal } from 'react-icons/bi'
 import { FiGithub } from 'react-icons/fi'
+import type { IconType } from 'react-icons'
 import { Project } from '@/common/types'
 import { serializeHtml } from '@/common/utils'
 import { Button, Chip, Link, SlideUp } from '@/components'
+
+type IconLink = {
+  id: string
+  icon: IconType
+  title: string
+  href?: string
+}
 
 interface ProjectDetailProps {
   project: Project
@@ -30,65 +38,48 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
 
           <div className="flex gap-2">
             {[
-              typeof url === 'string'
-                ? {
-                    id: 'site',
-                    icon: BiLinkExternal,
-                    title: 'View live project',
-                    href: url,
-                  }
-                : {},
-              typeof githubUrl === 'string'
-                ? {
-                    id: 'source',
-                    icon: FiGithub,
-                    title: 'View source code',
-                    href: githubUrl,
-                  }
-                : {},
-            ]
-              .filter(item => item?.id)
-              .map(
-                ({
-                  id,
-                  icon,
-                  title,
-                  href,
-                }: {
-                  id?: string
-                  icon?: any
-                  title?: string
-                  href?: string
-                }) => {
-                  const Icon = icon
+              ...(typeof url === 'string'
+                ? [
+                    {
+                      id: 'site',
+                      icon: BiLinkExternal,
+                      title: 'View live project',
+                      href: url,
+                    },
+                  ]
+                : []),
+              ...(typeof githubUrl === 'string'
+                ? [
+                    {
+                      id: 'source',
+                      icon: FiGithub,
+                      title: 'View source code',
+                      href: githubUrl,
+                    },
+                  ]
+                : []),
+            ].map(({ id, icon: Icon, title, href }: IconLink) => {
+              if (!href) {
+                return (
+                  <Button key={id} isSquare aria-label={title} disabled={true}>
+                    <Icon className="h-6 w-6" />
+                  </Button>
+                )
+              }
 
-                  if (!href) {
-                    return (
-                      <Button
-                        key={id}
-                        isSquare
-                        aria-label={title}
-                        disabled={true}
-                      >
-                        <Icon className="h-6 w-6" />
-                      </Button>
-                    )
-                  }
-
-                  return (
-                    <Link
-                      key={id}
-                      variant="button"
-                      isSquare
-                      aria-label={title}
-                      href={href}
-                      openInNew
-                    >
-                      <Icon className="h-6 w-6" />
-                    </Link>
-                  )
-                },
-              )}
+              return (
+                <Link
+                  key={id}
+                  variant="button"
+                  isSquare
+                  aria-label={title}
+                  href={href}
+                  openInNew
+                >
+                  <Icon className="h-6 w-6" />
+                </Link>
+              )
+            })}
           </div>
         </div>
 
