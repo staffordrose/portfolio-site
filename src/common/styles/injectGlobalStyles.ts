@@ -11,13 +11,13 @@ const injectGlobalStyles = () => injectGlobal`
     @apply font-ibm-plex-mono text-(navy-800 dark:navy-100);
   }
   h1 {
-    @apply text-(4xl md:5xl xl:6xl);
+    @apply text-(4xl md:5xl);
   }
   h2 {
-    @apply text-(3xl xl:5xl md:4xl);
+    @apply text-(3xl md:4xl);
   }
   h3 {
-    @apply text-2xl;
+    @apply text-(2xl md:3xl);
   }
   h4 {
     @apply text-xl;

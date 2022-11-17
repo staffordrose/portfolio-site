@@ -5,11 +5,11 @@ const gridStyles = css`
   grid-template-areas:
     'title .'
     'subtitle .'
-    'timespan .';
+    'info .';
 
   @media (min-width: 768px) {
     grid-template-areas:
-      'title timespan'
+      'title info'
       'subtitle .';
   }
 `
@@ -17,13 +17,13 @@ const gridStyles = css`
 interface ResumeItemHeadingProps {
   title: string
   subtitle?: string
-  timespan?: string
+  info?: string
 }
 
 const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
   title,
   subtitle,
-  timespan,
+  info,
 }) => (
   <div
     className={`
@@ -56,16 +56,16 @@ const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
       </h4>
     )}
 
-    {!!timespan && (
+    {!!info && (
       <span
         className={`
           font-ibm-plex-mono text-base sm:text-lg
           ${css`
-            grid-area: timespan;
+            grid-area: info;
           `}
         `}
       >
-        {timespan}
+        {info}
       </span>
     )}
   </div>

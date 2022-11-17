@@ -59,7 +59,7 @@ const resume: ResumeSection[] = [
                 props: {
                   title: `Web Developer`,
                   subtitle: `Leisure Time Inc. - Idaho Falls, ID`,
-                  timespan: `Jan 2018 - Feb 2022`,
+                  info: `Jan 2018 - Feb 2022`,
                 },
               },
               {
@@ -75,7 +75,7 @@ const resume: ResumeSection[] = [
                   {
                     type: 'ul',
                     props: {
-                      className: 'mb-2 pl-4 list-square list-outside',
+                      className: 'pl-4 list-square list-outside',
                     },
                     children: [
                       {
@@ -224,13 +224,6 @@ const resume: ResumeSection[] = [
                       },
                     ],
                   },
-                  {
-                    type: 'chip',
-                    props: {
-                      colorScheme: 'navy',
-                    },
-                    content: `Letter of Recommendation available upon request`,
-                  },
                 ],
               },
             ],
@@ -243,7 +236,7 @@ const resume: ResumeSection[] = [
                 props: {
                   title: `Videographer`,
                   subtitle: `Independent Contractor - Salt Lake City, UT`,
-                  timespan: `May 2015 - Dec 2017`,
+                  info: `May 2015 - Dec 2017`,
                 },
               },
               {
@@ -260,7 +253,7 @@ const resume: ResumeSection[] = [
                         children: [
                           {
                             type: 'span',
-                            content: `Filmed & edited promotional videos for:`,
+                            content: `Filmed & edited promotional videos for local businesses, including:`,
                           },
                           {
                             type: 'ul',
@@ -426,7 +419,7 @@ const resume: ResumeSection[] = [
                 props: {
                   title: `Internet Marketing Consultant`,
                   subtitle: `Independent Contractor - Provo & Salt Lake City, UT`,
-                  timespan: `Apr 2014 - Dec 2017`,
+                  info: `Apr 2014 - Dec 2017`,
                 },
               },
               {
@@ -483,7 +476,7 @@ const resume: ResumeSection[] = [
                 props: {
                   title: `Internet Marketing Guru`,
                   subtitle: `High 5 Promotions - Austin, TX`,
-                  timespan: `May 2013 - Apr 2014`,
+                  info: `May 2013 - Apr 2014`,
                 },
               },
               {
@@ -525,7 +518,7 @@ const resume: ResumeSection[] = [
                 props: {
                   title: `Internet Marketing Intern`,
                   subtitle: `High 5 Promotions - Austin, TX`,
-                  timespan: `Oct 2012 - May 2013`,
+                  info: `Oct 2012 - May 2013`,
                 },
               },
               {
@@ -582,7 +575,7 @@ const resume: ResumeSection[] = [
                 props: {
                   title: `Texas State University-San Marcos`,
                   subtitle: `Bachelor of Business Administration - Marketing`,
-                  timespan: `Fall 2011 - Spring 2013`,
+                  info: `Fall 2011 - Spring 2013`,
                 },
               },
               {
@@ -605,6 +598,140 @@ const resume: ResumeSection[] = [
                         content: `Completed generals at Weatherford College & Austin Community College prior to attending TXST`,
                       },
                     ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'recommendations',
+    title: 'References',
+    animationDelay: 300,
+    children: [
+      {
+        type: 'ul',
+        props: {
+          className: 'flex flex-col gap-8',
+        },
+        children: [
+          {
+            type: 'ResumeItem',
+            children: [
+              {
+                type: 'ResumeItemHeading',
+                props: {
+                  title: `Taylor Wright`,
+                  subtitle: `Owner at Leisure Time Inc.`,
+                  info: `Professional Recommendation`,
+                },
+              },
+              {
+                type: 'ResumeItemContent',
+                children: [
+                  {
+                    type: 'p',
+                    content: `I've had the pleasure of working with Stafford for over 10 years now. He is one of the main reasons behind Leisure Times growth and success the past few years.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `With Stafford's help we were able to bring Leisure Time out of old age and give it a complete overhaul.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `This included a complete rebranding. And all the work that goes along with it; Logo, brand guide, website, vehicle wraps, point of sale materials, online shop and so on.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `Stafford was able to handle multiple positions within the company and his work was always excellent and on time. This included graphic design, video creation and editing, he was at one point our entire marketing department.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `Each time a new skill set was required, Stafford had no trouble becoming proficient at it.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `This was recently needed when we decided to build a custom program and website for the business. Over a short period of time Stafford was able to learn new programming languages and build out a platform to meet Leisure Times needs.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `During this process Stafford did a phenomenal job outlining the projects needs, timelines, and constraints. Stafford did an excellent job keeping me informed on the projects progress and always provided valuable feedback.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `Some of Stafford strengths would include:`,
+                  },
+                  {
+                    type: 'ul',
+                    props: {
+                      className: 'pl-4 list-square list-outside',
+                    },
+                    children: [
+                      {
+                        type: 'li',
+                        content: `Ability to see the big picture but keeps close watch on the small details`,
+                      },
+                      {
+                        type: 'li',
+                        content: `Manage and arrange big tasks into small workable projects`,
+                      },
+                      {
+                        type: 'li',
+                        content: `Improve upon ideas and make them better`,
+                      },
+                      { type: 'li', content: `Focused / driven` },
+                      {
+                        type: 'li',
+                        content: `Able to adapt to new challenges and develop new skill sets with speed`,
+                      },
+                      { type: 'li', content: `Task oriented` },
+                      { type: 'li', content: `Time management` },
+                    ],
+                  },
+                  {
+                    type: 'p',
+                    content: `Stafford also did a great job onboarding new team members and provided excellent training.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `Stafford will be a standout addition to your team.`,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: 'ResumeItem',
+            children: [
+              {
+                type: 'ResumeItemHeading',
+                props: {
+                  title: `Michael Morgan`,
+                  subtitle: `Lawyer at Kirkland & Ellis`,
+                  info: `Personal Recommendation`,
+                },
+              },
+              {
+                type: 'ResumeItemContent',
+                children: [
+                  {
+                    type: 'p',
+                    content: `I have known Stafford Rose for almost 8 years now. We have been roommates multiple times; we have participated in a significant number of high-adventure activities together; and I have worked with him previously (while he was at his prior company, Leisure Time). I have had the opportunity to get to know Stafford over a long period of time and in a variety of settings. Regardless of the setting, I have repeatedly found Stafford to be smart, organized, and hardworking.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `Stafford is smart. He is intellectually curious and can take complicated and unorganized information and quickly make sense of it. It is not uncommon for him to comprehend information before I do. When this happens, I usually turn to him to explain. This is because, while he can process information quickly, he knows how to explain concepts in easy-to-understand language.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `Stafford is organized. He is punctual and prompt and keeps track of details—even when things get chaotic. His focus on detail and his ability to remain calm under pressure are a few reasons why I prefer to do high-adventure activities (i.e., canyoneering) with him. In planning and executing potentially life-threatening activities, I want someone who is as detail oriented and calm as Stafford is by my side.`,
+                  },
+                  {
+                    type: 'p',
+                    content: `Stafford is hardworking. As his roommate and as his coworker, I witnessed how many hours he can work without losing focus (despite a lack of supervision). His self-motivated work ethic is impressive. He doesn’t wait for others to tell him what to do. Whether it be finding ways to make a product better, to mentor a coworker, or to increase efficiencies, he adds value to whatever team he is part of.`,
                   },
                 ],
               },

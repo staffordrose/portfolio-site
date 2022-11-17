@@ -64,7 +64,7 @@ const Resume: NextPage = () => {
           </div>
 
           {resume
-            .slice(0, 3)
+            .slice(0, 4)
             .map(({ id, title, animationDelay, children }, i) => (
               <SlideUp
                 key={id}
@@ -87,7 +87,7 @@ const Resume: NextPage = () => {
 
           <div className="grid grid-cols-([1fr] md:[1fr_1fr]) gap-8 w-full">
             {resume
-              .slice(3)
+              .slice(4)
               .map(({ id, title, animationDelay, children }, i) => (
                 <SlideUp
                   key={id}
@@ -97,7 +97,7 @@ const Resume: NextPage = () => {
                   }
                 >
                   <ResumeSection
-                    innerRef={el => (sectionElements.current[i + 3] = el)}
+                    innerRef={el => (sectionElements.current[i + 4] = el)}
                     id={id}
                     title={title}
                   >
