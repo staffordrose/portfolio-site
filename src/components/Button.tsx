@@ -54,7 +54,7 @@ const squareSizes = {
   lg: `h-12 w-12 text-lg`,
 }
 
-interface ButtonProps {
+export type ButtonProps = {
   className?: string
   variant?: 'solid' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
@@ -65,7 +65,7 @@ interface ButtonProps {
   children: ReactNode
 }
 
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   className = '',
   variant = 'ghost',
   size = 'md',
@@ -80,5 +80,3 @@ const Button: FC<ButtonProps> = ({
     {...props}
   />
 )
-
-export default Button

@@ -9,13 +9,13 @@ import { mergeRecords, serializeHtmlToPlainText } from '@/common/utils'
 import { Chip, Link, ScaleIn, SlideUp } from '@/components'
 import { useIntersectionObserver } from '@/hooks'
 
-interface ProjectGridProps {
+export type ProjectGridProps = {
   projects: Project[]
   animationDelay?: number
   animationDuration?: number
 }
 
-const ProjectGrid: FC<ProjectGridProps> = ({
+export const ProjectGrid: FC<ProjectGridProps> = ({
   projects,
   animationDelay,
   animationDuration,
@@ -193,5 +193,3 @@ const ProjectGrid: FC<ProjectGridProps> = ({
     </div>
   )
 }
-
-export default ProjectGrid

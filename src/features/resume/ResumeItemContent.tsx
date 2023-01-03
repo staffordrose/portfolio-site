@@ -1,11 +1,11 @@
 import type { FC, ReactNode } from 'react'
 import { css } from 'twind'
 
-interface ResumeItemContentProps {
+export type ResumeItemContentProps = {
   children: ReactNode
 }
 
-const ResumeItemContent: FC<ResumeItemContentProps> = ({ children }) => (
+export const ResumeItemContent: FC<ResumeItemContentProps> = ({ children }) => (
   <div
     className={`${css`
       & > :not(:last-child) {
@@ -16,5 +16,3 @@ const ResumeItemContent: FC<ResumeItemContentProps> = ({ children }) => (
     {children}
   </div>
 )
-
-export default ResumeItemContent

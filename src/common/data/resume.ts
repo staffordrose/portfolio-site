@@ -8,7 +8,7 @@ import {
 import { FiGithub } from 'react-icons/fi'
 import { ResumeSection } from '@/common/types'
 
-const resume: ResumeSection[] = [
+export const resume: ResumeSection[] = [
   {
     id: 'summary',
     title: 'Summary',
@@ -902,5 +902,3 @@ const resume: ResumeSection[] = [
     ],
   },
 ]
-
-export default resume

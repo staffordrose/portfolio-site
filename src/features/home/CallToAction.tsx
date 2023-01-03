@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import { RiArrowRightFill } from 'react-icons/ri'
 import { Link } from '@/components'
 
-const CallToAction: FC = () => {
+export const CallToAction: FC = () => {
   return (
     <div
       className={`
@@ -38,5 +38,3 @@ const CallToAction: FC = () => {
     </div>
   )
 }
-
-export default CallToAction

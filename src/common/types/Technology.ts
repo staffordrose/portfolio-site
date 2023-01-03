@@ -1,4 +1,4 @@
-export interface Technology {
+export type Technology = {
   id: string
   image?: {
     src: string

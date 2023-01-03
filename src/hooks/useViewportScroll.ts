@@ -4,7 +4,7 @@ import { throttle } from '@/common/utils'
 const useIsomorphicLayoutEffect =
   typeof window !== 'undefined' ? useLayoutEffect : useEffect
 
-const useViewportScroll = ({ active = true }: { active: boolean }) => {
+export const useViewportScroll = ({ active = true }: { active: boolean }) => {
   const [viewportScroll, setViewportScroll] = useState<{
     scrollY: number
     scrollYProgress: number
@@ -41,5 +41,3 @@ const useViewportScroll = ({ active = true }: { active: boolean }) => {
 
   return viewportScroll
 }
-
-export default useViewportScroll

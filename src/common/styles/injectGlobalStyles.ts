@@ -1,6 +1,6 @@
 import { injectGlobal } from 'twind'
 
-const injectGlobalStyles = () => injectGlobal`
+export const injectGlobalStyles = () => injectGlobal`
   body {
     @apply min-w-[360px] bg-(navy-50 dark:navy-900);
   }
@@ -35,5 +35,3 @@ const injectGlobalStyles = () => injectGlobal`
     @apply px-1 rounded-sm font-ibm-plex-mono text-sm text-navy-700 bg-navy-200 dark:(text-navy-300 bg-navy-700);
   }
 `
-
-export default injectGlobalStyles

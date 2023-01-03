@@ -15,7 +15,7 @@ const slideUpKeyframes = keyframes`
   }
 `
 
-interface SlideUpProps {
+export type SlideUpProps = {
   animationDelay?: number
   animationDuration?: number
   animationPlayState?: 'paused' | 'running'
@@ -23,7 +23,7 @@ interface SlideUpProps {
   children: ReactNode
 }
 
-const SlideUp: FC<SlideUpProps> = ({
+export const SlideUp: FC<SlideUpProps> = ({
   animationDelay = 0,
   animationDuration = 800,
   animationPlayState = 'running',
@@ -46,5 +46,3 @@ const SlideUp: FC<SlideUpProps> = ({
     {children}
   </div>
 )
-
-export default SlideUp

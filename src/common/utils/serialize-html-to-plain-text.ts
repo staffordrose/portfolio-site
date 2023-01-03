@@ -16,7 +16,7 @@ const mapContentOrChildren = ({
   }
 }
 
-const serializeHtmlToPlainText = (arr: ContentBlock[]): string => {
+export const serializeHtmlToPlainText = (arr: ContentBlock[]): string => {
   return arr
     .map(({ type, content, children }) => {
       switch (type) {
@@ -79,5 +79,3 @@ const serializeHtmlToPlainText = (arr: ContentBlock[]): string => {
     })
     .join('')
 }
-
-export default serializeHtmlToPlainText

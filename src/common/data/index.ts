@@ -1,4 +1,4 @@
-export { default as pages } from './pages'
-export { default as projects } from './projects'
-export { default as resume } from './resume'
-export { default as technologies } from './technologies'
+export * from './pages'
+export * from './projects'
+export * from './resume'
+export * from './technologies'

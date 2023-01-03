@@ -9,7 +9,7 @@ import { pages } from '@/common/data'
 import { Button, Logo } from '@/components'
 import { usePrevious } from '@/hooks'
 
-interface NavProps {
+type NavProps = {
   router: NextRouter
 }
 
@@ -148,7 +148,7 @@ const ThemeToggle: FC = () => {
   )
 }
 
-const Header: FC = () => {
+export const Header: FC = () => {
   const router = useRouter()
 
   return (
@@ -190,5 +190,3 @@ const Header: FC = () => {
     </header>
   )
 }
-
-export default Header

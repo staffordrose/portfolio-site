@@ -16,11 +16,11 @@ import {
 } from './objects'
 import { getCarouselTimeline, getMainTimeline } from './timelines'
 
-interface MobileWireframeProps {
+type MobileWireframeProps = {
   theme: 'light' | 'dark'
 }
 
-const MobileWireframe: FC<MobileWireframeProps> = ({ theme }) => {
+export const MobileWireframe: FC<MobileWireframeProps> = ({ theme }) => {
   const mountRef = useRef<HTMLDivElement | null>(null)
 
   const prevTheme = usePrevious(theme)
@@ -385,5 +385,3 @@ const MobileWireframe: FC<MobileWireframeProps> = ({ theme }) => {
     </>
   )
 }
-
-export default MobileWireframe

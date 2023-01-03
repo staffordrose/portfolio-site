@@ -1,6 +1,6 @@
 import { Technology } from '@/common/types'
 
-const technologies: Technology[] = [
+export const technologies: Technology[] = [
   {
     id: `chakra-ui`,
     image: { src: '/images/technologies/chakra-ui.png', alt: '' },
@@ -77,5 +77,3 @@ const technologies: Technology[] = [
     title: `Zustand`,
   },
 ]
-
-export default technologies

@@ -1,13 +1,13 @@
 import type { FC } from 'react'
 import NextHead from 'next/head'
 
-interface HeadProps {
+export type HeadProps = {
   title: string
   description: string
   image?: string
 }
 
-const Head: FC<HeadProps> = ({ title, description, image }) => {
+export const Head: FC<HeadProps> = ({ title, description, image }) => {
   return (
     <NextHead>
       <title>{title} | Stafford Rose</title>
@@ -25,5 +25,3 @@ const Head: FC<HeadProps> = ({ title, description, image }) => {
     </NextHead>
   )
 }
-
-export default Head

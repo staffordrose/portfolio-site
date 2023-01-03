@@ -1,6 +1,6 @@
 import { ContentBlock } from './ContentBlock'
 
-export interface ResumeSection {
+export type ResumeSection = {
   id: string
   title: string
   animationDelay: number

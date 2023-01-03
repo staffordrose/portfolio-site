@@ -14,11 +14,11 @@ type IconLink = {
   href?: string
 }
 
-interface ProjectDetailProps {
+export type ProjectDetailProps = {
   project: Project
 }
 
-const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
+export const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
   const { id, url, githubUrl, image, title, flag, description } = project
 
   return (
@@ -105,5 +105,3 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
     </SlideUp>
   )
 }
-
-export default ProjectDetail

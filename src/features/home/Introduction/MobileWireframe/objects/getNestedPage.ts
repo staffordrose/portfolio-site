@@ -1,18 +1,18 @@
 import * as THREE from 'three'
 
-interface GetNestedPage {
+type GetNestedPage = {
   scene: THREE.Scene
   screenColor: number
   baseColor: number
   actionColor: number
 }
 
-export default function getNestedPage({
+export const getNestedPage = ({
   scene,
   screenColor,
   baseColor,
   actionColor,
-}: GetNestedPage) {
+}: GetNestedPage) => {
   const nestedPage = new THREE.Group()
   scene.add(nestedPage)
 

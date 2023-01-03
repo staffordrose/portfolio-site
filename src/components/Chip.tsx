@@ -16,14 +16,14 @@ const sizes = {
   inline: '',
 }
 
-interface ChipProps {
+export type ChipProps = {
   className?: string
   colorScheme?: 'navy' | 'yellow-orange-red'
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'inline'
   children: ReactNode
 }
 
-const Chip: FC<ChipProps> = ({
+export const Chip: FC<ChipProps> = ({
   className = '',
   colorScheme = 'yellow-orange-red',
   size = 'md',
@@ -41,5 +41,3 @@ const Chip: FC<ChipProps> = ({
     {children}
   </span>
 )
-
-export default Chip

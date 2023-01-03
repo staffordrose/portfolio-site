@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-tsc": "tsc --noEmit && eslint **/*.{ts,tsx,json,js} *.*"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.0.0",

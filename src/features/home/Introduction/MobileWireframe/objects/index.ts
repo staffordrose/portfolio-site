@@ -1,7 +1,7 @@
-export { default as getHeader } from './getHeader';
-export { default as getMain } from './getMain';
-export { default as getModal } from './getModal';
-export { default as getNavigation } from './getNavigation';
-export { default as getNestedPage } from './getNestedPage';
-export { default as getOverlay } from './getOverlay';
-export { default as getScreen } from './getScreen';
+export * from './getHeader'
+export * from './getMain'
+export * from './getModal'
+export * from './getNavigation'
+export * from './getNestedPage'
+export * from './getOverlay'
+export * from './getScreen'

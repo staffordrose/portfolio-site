@@ -56,7 +56,7 @@ const inlineSizes = {
   inherit: ``,
 }
 
-interface LinkProps {
+export type LinkProps = {
   className?: string
   variant?: 'button' | 'inline'
   colorScheme?: 'navy' | 'yellow-orange-red'
@@ -67,7 +67,7 @@ interface LinkProps {
   children: ReactNode
 }
 
-const Link: FC<LinkProps> = ({
+export const Link: FC<LinkProps> = ({
   className = '',
   variant = 'inline',
   colorScheme = 'navy',
@@ -131,5 +131,3 @@ const Link: FC<LinkProps> = ({
     </NextLink>
   )
 }
-
-export default Link

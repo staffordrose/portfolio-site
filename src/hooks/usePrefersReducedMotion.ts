@@ -3,7 +3,7 @@ import { useEffect, useLayoutEffect, useState } from 'react'
 const useIsomorphicLayoutEffect =
   typeof window !== 'undefined' ? useLayoutEffect : useEffect
 
-function usePrefersReducedMotion(): boolean {
+export const usePrefersReducedMotion = (): boolean => {
   const [preference, setPreference] = useState<boolean>(
     typeof window !== 'undefined'
       ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -28,5 +28,3 @@ function usePrefersReducedMotion(): boolean {
 
   return preference
 }
-
-export default usePrefersReducedMotion

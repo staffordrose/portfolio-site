@@ -7,10 +7,10 @@ const defaultOptions: IntersectionObserverInit = {
   threshold: 0,
 }
 
-function useIntersectionObserver(
+export const useIntersectionObserver = (
   items = defaultItems,
   options = defaultOptions,
-): IntersectionObserverEntry[] | undefined {
+): IntersectionObserverEntry[] | undefined => {
   const { root, rootMargin, threshold } = options
 
   const [entries, setEntries] = useState<
@@ -39,5 +39,3 @@ function useIntersectionObserver(
 
   return entries
 }
-
-export default useIntersectionObserver

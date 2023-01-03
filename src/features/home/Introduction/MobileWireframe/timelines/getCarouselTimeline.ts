@@ -1,22 +1,20 @@
-import * as THREE from 'three';
-import gsap from 'gsap';
+import * as THREE from 'three'
+import gsap from 'gsap'
 import {
   shortDuration,
   mdDuration,
   longDuration,
   xlDuration,
-} from './constants';
+} from './constants'
 
-const delay = 2;
+const delay = 2
 
-interface GetCarouselTweenGroup {
-  carousel: THREE.Group;
+type GetCarouselTimeline = {
+  carousel: THREE.Group
 }
 
-export default function getCarouselTweenGroup({
-  carousel,
-}: GetCarouselTweenGroup) {
-  const carouselTl = gsap.timeline();
+export const getCarouselTimeline = ({ carousel }: GetCarouselTimeline) => {
+  const carouselTl = gsap.timeline()
 
   carouselTl
     .to(carousel.position, {
@@ -35,14 +33,14 @@ export default function getCarouselTweenGroup({
       {},
       {
         duration: delay - shortDuration,
-      }
+      },
     )
     .pause()
     .to(
       {},
       {
         duration: 8,
-      }
+      },
     )
     .resume()
     .to(carousel.position, {
@@ -56,7 +54,7 @@ export default function getCarouselTweenGroup({
       duration: xlDuration,
       delay,
       ease: 'power1.inOut',
-    });
+    })
 
-  return { carouselTl };
+  return { carouselTl }
 }

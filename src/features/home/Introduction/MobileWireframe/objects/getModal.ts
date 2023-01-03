@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-interface GetModal {
+type GetModal = {
   scene: THREE.Scene
   baseColor: number
   actionColor: number
@@ -8,13 +8,13 @@ interface GetModal {
   overlayColor: number
 }
 
-export default function getModal({
+export const getModal = ({
   scene,
   baseColor,
   actionColor,
   modalColor,
   overlayColor,
-}: GetModal) {
+}: GetModal) => {
   const modal = new THREE.Group()
   modal.renderOrder = 0.9
   modal.position.z = -0.9

@@ -1,6 +1,6 @@
 import { ContentBlock } from './ContentBlock'
 
-export interface Project {
+export type Project = {
   id: string
   url: string | null
   githubUrl: string | null

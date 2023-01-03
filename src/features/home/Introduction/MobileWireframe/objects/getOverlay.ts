@@ -1,16 +1,16 @@
 import * as THREE from 'three'
 
-interface GetOverlay {
+type GetOverlay = {
   overlayScene: THREE.Scene
   screenShape: THREE.Shape
   overlayColor: number
 }
 
-export default function getOverlay({
+export const getOverlay = ({
   overlayScene,
   screenShape,
   overlayColor,
-}: GetOverlay) {
+}: GetOverlay) => {
   const overlayShape = new THREE.Shape()
     .moveTo(-20, -20)
     .lineTo(20, -20)

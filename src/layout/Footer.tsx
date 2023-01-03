@@ -15,7 +15,7 @@ const links = [
   },
 ]
 
-const Footer: FC = () => {
+export const Footer: FC = () => {
   return (
     <footer
       className={`
@@ -157,5 +157,3 @@ const Footer: FC = () => {
     </footer>
   )
 }
-
-export default Footer

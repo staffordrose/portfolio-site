@@ -11,7 +11,7 @@ const technologiesKeyframes = keyframes`
   }
 `
 
-const Technologies: FC = () => {
+export const Technologies: FC = () => {
   return (
     <div
       className={`
@@ -141,5 +141,3 @@ const Technologies: FC = () => {
     </div>
   )
 }
-
-export default Technologies

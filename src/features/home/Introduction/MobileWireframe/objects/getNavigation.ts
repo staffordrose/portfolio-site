@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-interface GetNavigation {
+type GetNavigation = {
   scene: THREE.Scene
   screenColor: number
   baseColor: number
@@ -8,13 +8,13 @@ interface GetNavigation {
   modalColor: number
 }
 
-export default function getNavigation({
+export const getNavigation = ({
   scene,
   screenColor,
   baseColor,
   actionColor,
   modalColor,
-}: GetNavigation) {
+}: GetNavigation) => {
   const navigation = new THREE.Group()
   navigation.position.set(3.25, 0, 0.7)
   scene.add(navigation)

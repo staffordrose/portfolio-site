@@ -1,12 +1,12 @@
 import * as THREE from 'three'
 
-interface GetMain {
+type GetMain = {
   scene: THREE.Scene
   baseColor: number
   actionColor: number
 }
 
-export default function getMain({ scene, baseColor, actionColor }: GetMain) {
+export const getMain = ({ scene, baseColor, actionColor }: GetMain) => {
   const main = new THREE.Group()
   main.position.z = 0.1
   scene.add(main)

@@ -7,7 +7,7 @@ import {
   xlDuration,
 } from './constants'
 
-interface GetMainTweenGroup {
+type GetMainTimeline = {
   header: THREE.Group
   menuBtn: THREE.Mesh
   menuBtnMaterial: THREE.MeshBasicMaterial
@@ -46,7 +46,7 @@ interface GetMainTweenGroup {
   activeColor: number
 }
 
-export default function getMainTweenGroup({
+export const getMainTimeline = ({
   header,
   menuBtn,
   menuBtnMaterial,
@@ -83,7 +83,7 @@ export default function getMainTweenGroup({
   baseColor,
   actionColor,
   activeColor,
-}: GetMainTweenGroup) {
+}: GetMainTimeline) => {
   const mainTl = gsap.timeline()
 
   mainTl

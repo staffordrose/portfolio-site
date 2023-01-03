@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { FC, MutableRefObject } from 'react'
 import { mergeRecords } from '@/common/utils'
 
-interface SectionNavProps {
+export type SectionNavProps = {
   sections: Array<{ id: string; name: string }>
   anchorElements: MutableRefObject<(HTMLElement | null)[]>
   entries: IntersectionObserverEntry[] | undefined
 }
 
-const SectionNav: FC<SectionNavProps> = ({
+export const SectionNav: FC<SectionNavProps> = ({
   sections,
   anchorElements,
   entries,
@@ -24,7 +24,7 @@ const SectionNav: FC<SectionNavProps> = ({
     offsetTop: 0,
   })
 
-  const getActiveLink = () => {
+  const getActiveLink = useCallback(() => {
     const firstActive = linkState.current.find(l => l.value)
     const item = sections.find(l => l.id === firstActive?.name) ?? sections[0]
     const itemIndex = sections.findIndex(l => l.id === firstActive?.name)
@@ -37,7 +37,7 @@ const SectionNav: FC<SectionNavProps> = ({
       id: item.id,
       offsetTop: active.offsetTop,
     })
-  }
+  }, [sections])
 
   useEffect(() => {
     if (Array.isArray(entries) && entries.length) {
@@ -50,7 +50,7 @@ const SectionNav: FC<SectionNavProps> = ({
 
       getActiveLink()
     }
-  }, [entries])
+  }, [entries, getActiveLink])
 
   const offset =
     marker.id === 'technologies'
@@ -136,5 +136,3 @@ const SectionNav: FC<SectionNavProps> = ({
     </div>
   )
 }
-
-export default SectionNav

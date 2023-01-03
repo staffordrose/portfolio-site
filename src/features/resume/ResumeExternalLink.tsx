@@ -1,11 +1,11 @@
 import type { FC, ReactNode } from 'react'
 
-interface ResumeExternalLinkProps {
+export type ResumeExternalLinkProps = {
   href: string
   children: ReactNode
 }
 
-const ResumeExternalLink: FC<ResumeExternalLinkProps> = ({
+export const ResumeExternalLink: FC<ResumeExternalLinkProps> = ({
   href,
   children,
 }) => (
@@ -17,9 +17,8 @@ const ResumeExternalLink: FC<ResumeExternalLinkProps> = ({
       `}
     href={href}
     target="_blank"
+    rel="noreferrer"
   >
     {children}
   </a>
 )
-
-export default ResumeExternalLink

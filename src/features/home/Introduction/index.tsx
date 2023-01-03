@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import { css } from 'twind'
 import { Emoji, SlideUp } from '@/components'
 import { useViewportScroll } from '@/hooks'
-import MobileWireframe from './MobileWireframe'
+import { MobileWireframe } from './MobileWireframe'
 
 const getScrollStyles = (y: number, opacity: number) => css`
   transform: translateY(${y}px);
@@ -10,12 +10,12 @@ const getScrollStyles = (y: number, opacity: number) => css`
   transition: transform 150ms, opacity 150ms;
 `
 
-interface IntroductionProps {
+export type IntroductionProps = {
   theme: 'light' | 'dark'
   isVisible: boolean
 }
 
-const Introduction: FC<IntroductionProps> = ({ theme, isVisible }) => {
+export const Introduction: FC<IntroductionProps> = ({ theme, isVisible }) => {
   const { scrollY, scrollYProgress } = useViewportScroll({
     active: isVisible,
   })
@@ -82,5 +82,3 @@ const Introduction: FC<IntroductionProps> = ({ theme, isVisible }) => {
     </div>
   )
 }
-
-export default Introduction

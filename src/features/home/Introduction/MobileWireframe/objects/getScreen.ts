@@ -1,11 +1,11 @@
 import * as THREE from 'three'
 
-interface GetScreen {
+type GetScreen = {
   scene: THREE.Scene
   screenColor: number
 }
 
-export default function getScreen({ scene, screenColor }: GetScreen) {
+export const getScreen = ({ scene, screenColor }: GetScreen) => {
   const sx = -1.5
   const sy = -3.25
   const sw = 3

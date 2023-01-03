@@ -1,13 +1,13 @@
 import type { FC, ReactNode } from 'react'
 
-interface ResumeSectionProps {
+export type ResumeSectionProps = {
   innerRef?: (ref: HTMLElement | null) => void
   id?: string
   title: string
   children: ReactNode
 }
 
-const ResumeSection: FC<ResumeSectionProps> = ({
+export const ResumeSection: FC<ResumeSectionProps> = ({
   innerRef,
   id,
   title,
@@ -27,5 +27,3 @@ const ResumeSection: FC<ResumeSectionProps> = ({
     </section>
   )
 }
-
-export default ResumeSection

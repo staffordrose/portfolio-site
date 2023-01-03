@@ -1,1 +1,1 @@
-export { default as default } from './MobileWireframe'
+export * from './MobileWireframe'

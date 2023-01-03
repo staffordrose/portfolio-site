@@ -1,9 +1,9 @@
 import type { ComponentType } from 'react'
 
-export interface ContentBlock {
+export type ContentBlock = {
   type: string
   props?: Record<string, any>
-  content?: string
+  content?: string | number
   component?: ComponentType
   children?: ContentBlock[]
 }

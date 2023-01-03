@@ -1,18 +1,18 @@
 import * as THREE from 'three'
 
-interface GetHeader {
+type GetHeader = {
   scene: THREE.Scene
   actionColor: number
   headerColor: number
   logoColor: number
 }
 
-export default function getHeader({
+export const getHeader = ({
   scene,
   actionColor,
   headerColor,
   logoColor,
-}: GetHeader) {
+}: GetHeader) => {
   const header = new THREE.Group()
   header.position.set(0, 3, 0.5)
   scene.add(header)

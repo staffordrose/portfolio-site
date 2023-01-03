@@ -14,13 +14,13 @@ const gridStyles = css`
   }
 `
 
-interface ResumeItemHeadingProps {
+export type ResumeItemHeadingProps = {
   title: string
   subtitle?: string
   info?: string
 }
 
-const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
+export const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
   title,
   subtitle,
   info,
@@ -70,5 +70,3 @@ const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
     )}
   </div>
 )
-
-export default ResumeItemHeading

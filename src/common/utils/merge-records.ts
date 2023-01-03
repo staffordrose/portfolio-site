@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/7146217/merge-2-arrays-of-objects
 
-interface Obj {
+type Obj = {
   name: string
   value: any
 }
@@ -17,7 +17,7 @@ const convertToKeyValueDict = (arrayObj: Obj[]): KeyValueDict => {
 }
 
 // Update or merge array
-const mergeRecords = (a1: Obj[], a2: Obj[]) => {
+export const mergeRecords = (a1: Obj[], a2: Obj[]) => {
   const obj1 = convertToKeyValueDict(a1)
   const obj2 = convertToKeyValueDict(a2)
   // Note: Spread operator with objects used here
@@ -25,5 +25,3 @@ const mergeRecords = (a1: Obj[], a2: Obj[]) => {
   const val = Object.entries(merged_obj)
   return val.map(obj => ({ name: obj[0], value: obj[1] }))
 }
-
-export default mergeRecords

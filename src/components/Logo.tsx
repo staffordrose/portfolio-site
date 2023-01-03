@@ -1,14 +1,14 @@
 import type { FC } from 'react'
 import { tw } from 'twind'
 
-interface LogoProps {
+export type LogoProps = {
   id: string
   className?: string
   backColors?: string[]
   frontColors?: string[]
 }
 
-const Logo: FC<LogoProps> = ({
+export const Logo: FC<LogoProps> = ({
   id,
   className = '',
   backColors = ['colors.navy.300', 'colors.navy.500'],
@@ -53,5 +53,3 @@ const Logo: FC<LogoProps> = ({
     />
   </svg>
 )
-
-export default Logo

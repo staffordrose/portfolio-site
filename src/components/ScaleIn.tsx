@@ -16,7 +16,7 @@ const scaleInKeyframes = keyframes`
   }
 `
 
-interface ScaleInProps {
+export type ScaleInProps = {
   animationDelay?: number
   animationDuration?: number
   animationPlayState?: 'paused' | 'running'
@@ -24,7 +24,7 @@ interface ScaleInProps {
   children: ReactNode
 }
 
-const ScaleIn: FC<ScaleInProps> = ({
+export const ScaleIn: FC<ScaleInProps> = ({
   animationDelay = 0,
   animationDuration = 800,
   animationPlayState = 'running',
@@ -47,5 +47,3 @@ const ScaleIn: FC<ScaleInProps> = ({
     {children}
   </div>
 )
-
-export default ScaleIn
