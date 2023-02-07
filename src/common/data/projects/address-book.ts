@@ -7,7 +7,7 @@ export const addressBook: Project = {
   githubUrl: 'https://github.com/staffordrose/address-book',
   image: { src: '/images/projects/address-book.png', alt: '' },
   title: 'Address Book',
-  flag: 'Under Development',
+  flag: 'Paused Development',
   description: [
     {
       type: 'div',
@@ -24,7 +24,7 @@ export const addressBook: Project = {
               props: {
                 className: 'font-medium italic',
               },
-              content: `This project is in active development. Many features are unfinished or have `,
+              content: `Development of this project is paused. Some features are unfinished or have `,
             },
             {
               type: 'emoji',

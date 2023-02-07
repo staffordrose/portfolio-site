@@ -27,9 +27,32 @@ export const technologies: Technology[] = [
     title: `GSAP`,
   },
   {
+    id: `mapbox`,
+    image: { src: '/images/technologies/mapbox.svg', alt: '' },
+    title: `mapbox`,
+  },
+  {
     id: `next-js`,
     image: { src: '/images/technologies/next-js.svg', alt: '' },
     title: `Next.js`,
+  },
+  {
+    id: `react-hook-form`,
+    image: { src: '/images/technologies/react-hook-form.svg', alt: '' },
+    title: `React Hook form`,
+  },
+  {
+    id: `supabase`,
+    image: {
+      src: '/images/technologies/supabase.svg',
+      alt: '',
+    },
+    title: `Supabase`,
+  },
+  {
+    id: `tanstack-query`,
+    image: { src: '/images/technologies/tanstack-query.svg', alt: '' },
+    title: `TanStack Query`,
   },
   {
     id: 'three-js',
@@ -53,12 +76,12 @@ export const technologies: Technology[] = [
     title: `TypeScript`,
   },
   {
-    id: `supabase`,
+    id: `xata`,
     image: {
-      src: '/images/technologies/supabase.svg',
+      src: '/images/technologies/xata.png',
       alt: '',
     },
-    title: `Supabase`,
+    title: `xata`,
   },
   {
     id: `zag-js`,

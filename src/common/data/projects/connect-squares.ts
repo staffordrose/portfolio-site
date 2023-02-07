@@ -24,6 +24,9 @@ export const connectSquares: Project = {
     },
     {
       type: 'ul',
+      props: {
+        className: 'pl-4 list-square list-outside',
+      },
       children: [
         {
           type: 'li',
