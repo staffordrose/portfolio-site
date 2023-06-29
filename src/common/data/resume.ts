@@ -16,7 +16,7 @@ export const resume: ResumeSection[] = [
     children: [
       {
         type: 'p',
-        content: `Front-end web developer with 4+ years of experience building web applications. I am self-taught and worked as the sole designer and developer of multiple user-facing React applications.`,
+        content: `Front-end web developer with 5 years of experience building web applications. I am self-taught and worked as the sole designer and developer of multiple user-facing React applications.`,
       },
       {
         type: 'p',
