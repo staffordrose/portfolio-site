@@ -11,12 +11,9 @@ export const CallToAction: FC = () => {
         text-center
       `}
     >
-      <h2>Available for Hire</h2>
+      <h2>Resume</h2>
 
-      <p>
-        I&apos;m seeking to join a front-end team where I can make an impact and
-        advance my skills as a developer.
-      </p>
+      <p>View my resume (also available as a PDF download).</p>
 
       <Link
         className="group"
