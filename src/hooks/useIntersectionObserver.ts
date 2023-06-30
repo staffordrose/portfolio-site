@@ -35,7 +35,7 @@ export const useIntersectionObserver = (
     })
 
     return () => observer.disconnect()
-  }, [items, JSON.stringify(threshold), root, rootMargin])
+  }, [items, threshold, root, rootMargin])
 
   return entries
 }
