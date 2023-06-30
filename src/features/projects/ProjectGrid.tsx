@@ -113,7 +113,7 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
                           >
                             <div className="overflow-hidden flex justify-center content-center w-full rounded-sm bg-white shadow-xl aspect-square">
                               {!!image?.src && (
-                                <img
+                                <Image
                                   src={image.src}
                                   alt={image.alt || technologyTitle}
                                   width={80}
