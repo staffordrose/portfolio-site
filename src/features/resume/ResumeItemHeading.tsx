@@ -1,18 +1,4 @@
 import type { FC } from 'react'
-import { css } from 'twind'
-
-const gridStyles = css`
-  grid-template-areas:
-    'title .'
-    'subtitle .'
-    'info .';
-
-  @media (min-width: 768px) {
-    grid-template-areas:
-      'title info'
-      'subtitle .';
-  }
-`
 
 export type ResumeItemHeadingProps = {
   title: string
@@ -25,46 +11,17 @@ export const ResumeItemHeading: FC<ResumeItemHeadingProps> = ({
   subtitle,
   info,
 }) => (
-  <div
-    className={`
-      grid justify-between items-center
-      mb-2
-      ${gridStyles}
-    `}
-  >
-    <h3
-      className={`
-        text-xl sm:text-2xl
-        ${css`
-          grid-area: title;
-        `}
-      `}
-    >
-      {title}
-    </h3>
+  <div className="grid justify-between items-center mb-2 grid-areas-resume-item-heading md:grid-areas-resume-item-heading-md">
+    <h3 className="text-xl sm:text-2xl grid-in-title">{title}</h3>
 
     {!!subtitle && (
-      <h4
-        className={`
-        text-sm sm:text-base italic
-          ${css`
-            grid-area: subtitle;
-          `}
-        `}
-      >
+      <h4 className="text-sm sm:text-base italic grid-in-subtitle">
         {subtitle}
       </h4>
     )}
 
     {!!info && (
-      <span
-        className={`
-          font-ibm-plex-mono text-base sm:text-lg
-          ${css`
-            grid-area: info;
-          `}
-        `}
-      >
+      <span className="font-ibm-plex-mono text-base sm:text-lg grid-in-info">
         {info}
       </span>
     )}

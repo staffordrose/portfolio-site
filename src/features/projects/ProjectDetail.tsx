@@ -23,7 +23,7 @@ export const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
 
   return (
     <SlideUp key={id}>
-      <div className="flex flex-col gap-4 p-4 rounded-lg bg-(navy-100 dark:navy-800)">
+      <div className="flex flex-col gap-4 p-4 rounded-lg bg-navy-100 dark:bg-navy-800">
         <div className="grid grid-cols-[1fr] sm:grid-cols-[1fr_auto] gap-2 items-end">
           {title ? (
             flag ? (

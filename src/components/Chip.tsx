@@ -1,14 +1,7 @@
 import type { FC, ReactNode } from 'react'
+import cn from 'classnames'
 
-const styles = (colorScheme: 'navy' | 'yellow-orange-red') => `
-  ${
-    colorScheme === 'navy'
-      ? `text-navy-900 from-navy-400/50 to-navy-300/50 dark:(text-navy-50 from-navy-500/50 to-navy-400/50)`
-      : `text-(navy-900 dark:navy-50) from-yellow-500/50 via-orange-500/50 to-red-500/50`
-  }
-`
-
-const sizes = {
+const fontSizes = {
   sm: 'text-sm',
   md: 'text-base',
   lg: 'text-lg',
@@ -30,14 +23,20 @@ export const Chip: FC<ChipProps> = ({
   children,
 }) => (
   <span
-    className={`
-      ${styles(colorScheme)}
-      px-1 rounded-sm
-      font-ibm-plex-mono ${sizes[size]}
-      bg-gradient-to-br 
-      ${className}
-    `}
+    className={cn(
+      styles(colorScheme),
+      'px-1 rounded-sm font-ibm-plex-mono bg-gradient-to-br',
+      fontSizes[size],
+
+      className,
+    )}
   >
     {children}
   </span>
 )
+
+function styles(colorScheme: ChipProps['colorScheme']) {
+  return colorScheme === 'navy'
+    ? 'text-navy-900 from-navy-400/50 to-navy-300/50 dark:text-navy-50 dark:from-navy-500/50 dark:to-navy-400/50'
+    : 'text-navy-900 dark:text-navy-50 from-yellow-500/50 via-orange-500/50 to-red-500/50'
+}

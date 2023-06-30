@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import type { FC } from 'react'
 
 export type EmojiProps = {

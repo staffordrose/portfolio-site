@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import type { FC } from 'react'
 import Image from 'next/image'
-import { css } from 'twind'
 import { RiArrowRightFill } from 'react-icons/ri'
+import cn from 'classnames'
 import { technologies } from '@/common/data'
 import { Project } from '@/common/types'
 import { mergeRecords, serializeHtmlToPlainText } from '@/common/utils'
@@ -12,13 +12,11 @@ import { useIntersectionObserver } from '@/hooks'
 export type ProjectGridProps = {
   projects: Project[]
   animationDelay?: number
-  animationDuration?: number
 }
 
 export const ProjectGrid: FC<ProjectGridProps> = ({
   projects,
   animationDelay,
-  animationDuration,
 }) => {
   const projectElements = useRef<(HTMLElement | null)[]>([])
 
@@ -59,7 +57,6 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
             <SlideUp
               key={id}
               animationDelay={animationDelay}
-              animationDuration={animationDuration}
               animationPlayState={
                 projectVisibility[i]?.value ? 'running' : 'paused'
               }
@@ -67,14 +64,16 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
               <article
                 ref={el => (projectElements.current[i] = el)}
                 id={id}
-                className={`group~card w-full max-w-[960px] ${
-                  justify === 'left' ? `mr-auto` : `ml-auto`
-                }`}
+                className={cn(
+                  'w-full max-w-[960px]',
+                  justify === 'left' ? 'mr-auto' : 'ml-auto',
+                )}
               >
                 <figure
-                  className={`relative ${
-                    justify === 'left' ? `pr-[6.667%]` : `pl-[6.667%]`
-                  }`}
+                  className={cn(
+                    'relative',
+                    justify === 'left' ? 'pr-[6.667%]' : 'pl-[6.667%]',
+                  )}
                 >
                   <div
                     className="overflow-hidden h-auto w-full rounded shadow-xl"
@@ -92,13 +91,11 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
 
                   {Array.isArray(technologyIds) && technologyIds.length > 0 && (
                     <div
-                      className={`
-                        absolute z-10 top-2 sm:top-[6.667%] ${
-                          justify === 'left' ? `right-0` : `left-0`
-                        }
-                        flex flex-col gap-2 md:gap-3 lg:gap-4
-                        w-[12.5%] sm:w-[8.333%]
-                      `}
+                      className={cn(
+                        'absolute z-10 top-2 sm:top-[6.667%]',
+                        justify === 'left' ? `right-0` : `left-0`,
+                        'flex flex-col gap-2 md:gap-3 lg:gap-4 w-[12.5%] sm:w-[8.333%]',
+                      )}
                     >
                       {technologyIds.map((t, index) => {
                         const { image, title: technologyTitle } =
@@ -110,21 +107,11 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
                             animationDelay={
                               (animationDelay ?? 0) + (index + 1) * 150
                             }
-                            animationDuration={animationDuration}
                             animationPlayState={
                               projectVisibility[i]?.value ? 'running' : 'paused'
                             }
                           >
-                            <div
-                              className={`
-                                overflow-hidden
-                                flex justify-center content-center
-                                w-full rounded-sm
-                                bg-white
-                                shadow-xl
-                                aspect-square
-                              `}
-                            >
+                            <div className="overflow-hidden flex justify-center content-center w-full rounded-sm bg-white shadow-xl aspect-square">
                               {!!image?.src && (
                                 <img
                                   src={image.src}
@@ -140,7 +127,7 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
                     </div>
                   )}
 
-                  <figcaption className="flex flex-col gap-4 items-start py-6 text-(navy-900 dark:white)">
+                  <figcaption className="flex flex-col gap-4 items-start py-6 text-navy-900 dark:text-white">
                     {title ? (
                       flag ? (
                         <div className="grid sm:grid-cols-[auto_auto] gap-4 justify-items-start items-center">
@@ -153,18 +140,7 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
                     ) : null}
 
                     {!!descriptionStr && (
-                      <p
-                        className={`
-                          overflow-hidden
-                          text-ellipsis
-                          ${css`
-                            display: -webkit-box;
-                            -webkit-line-clamp: 2;
-                            line-clamp: 2;
-                            -webkit-box-orient: vertical;
-                          `}
-                        `}
-                      >
+                      <p className="overflow-hidden text-ellipsis line-clamp-2">
                         {descriptionStr}
                       </p>
                     )}
@@ -174,13 +150,7 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
                       variant="button"
                       href={`/projects?p=${id}`}
                     >
-                      <RiArrowRightFill
-                        className={`
-                          h-5 w-5
-                          -translate-x-2 transition-transform duration-300 ease-in-out
-                          group-hover:translate-x-0
-                        `}
-                      />
+                      <RiArrowRightFill className="h-5 w-5 -translate-x-2 transition-transform duration-300 ease-in-out group-hover:translate-x-0" />
                       View Project
                     </Link>
                   </figcaption>

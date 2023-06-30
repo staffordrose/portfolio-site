@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import { ContentBlock } from '@/common/types'
 import { Chip, Emoji, Link, LinkProps } from '@/components'
 import {
@@ -97,9 +98,7 @@ export const serializeHtml = (arr: ContentBlock[]) => {
           return (
             <ul
               key={i}
-              className={`list-disc list-inside${
-                className ? ` ${className}` : ``
-              }`}
+              className={cn('list-disc list-inside', className)}
               {...propsLessClassName}
             >
               {mapContentOrChildren({ content, children })}
@@ -110,9 +109,7 @@ export const serializeHtml = (arr: ContentBlock[]) => {
           return (
             <ol
               key={i}
-              className={`list-decimal list-inside${
-                className ? ` ${className}` : ``
-              }`}
+              className={cn('list-decimal list-inside', className)}
               {...propsLessClassName}
             >
               {mapContentOrChildren({ content, children })}

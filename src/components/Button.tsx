@@ -1,46 +1,5 @@
 import type { FC, ReactNode } from 'react'
-
-const sharedStyles = `
-  overflow-hidden
-  inline-flex justify-center items-center
-  border-[1px] border-solid border-white/0 rounded-sm
-  font-ibm-plex-mono
-  cursor-pointer
-  disabled:(
-    opacity-50
-    cursor-not-allowed
-  )
-`
-
-const variants = (variant: 'solid' | 'ghost', isActive: boolean) => {
-  if (variant === 'solid') {
-    return `
-      border-white/[0.025]
-      text-(navy-${isActive ? `100` : `800`} dark:navy-100)
-      bg-gradient-to-br ${
-        isActive
-          ? `from-yellow-500 via-orange-500 to-red-500`
-          : `from-(navy-600/25 dark:navy-500/25) to-(navy-400/25 dark:navy-300/25)`
-      }
-      enabled:hover:(
-        ${
-          isActive
-            ? `from-yellow-500 via-orange-500 to-red-500`
-            : `from-(navy-800/25 dark:navy-300/25) to-(navy-600/25 dark:navy-100/25)`
-        }
-      )
-    `
-  } else {
-    return `
-      text-(navy-800 dark:navy-100)
-      bg-transparent
-      enabled:hover:(
-        border-white/[0.025]
-        bg-gradient-to-br from-navy-600/25 to-navy-400/25
-      )
-    `
-  }
-}
+import cn from 'classnames'
 
 const sizes = {
   sm: `gap-1 min-h-8 py-2 px-2 text-sm`,
@@ -66,7 +25,7 @@ export type ButtonProps = {
 }
 
 export const Button: FC<ButtonProps> = ({
-  className = '',
+  className,
   variant = 'ghost',
   size = 'md',
   isSquare = false,
@@ -74,9 +33,34 @@ export const Button: FC<ButtonProps> = ({
   ...props
 }) => (
   <button
-    className={`${sharedStyles} ${variants(variant, isActive)} ${
-      isSquare ? squareSizes[size] : sizes[size]
-    } ${className}`}
+    className={cn(
+      'overflow-hidden inline-flex justify-center items-center border-[1px] border-solid border-white/0 rounded-sm font-ibm-plex-mono cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed',
+      variants(variant, isActive),
+      isSquare ? squareSizes[size] : sizes[size],
+      className,
+    )}
     {...props}
   />
 )
+
+function variants(
+  variant: ButtonProps['variant'],
+  isActive: ButtonProps['isActive'],
+) {
+  if (variant === 'solid') {
+    return cn(
+      'border-white/[0.025] dark:text-navy-100 bg-gradient-to-br',
+      isActive ? 'text-navy-100' : 'text-navy-800',
+      'dark:text-navy-100 bg-gradient-to-br',
+      isActive
+        ? 'from-yellow-500 via-orange-500 to-red-500'
+        : 'from-navy-600/25 dark:from-navy-500/25 to-navy-400/25 dark:to-navy-300/25',
+      'bg-gradient-to-br',
+      isActive
+        ? 'enabled:hover:from-yellow-500 enabled:hover:via-orange-500 enabled:hover:to-red-500'
+        : 'enabled:hover:from-navy-800/25 dark:enabled:hover:from-navy-300/25 enabled:hover:to-navy-600/25 dark:enabled:hover:to-navy-100/25',
+    )
+  } else {
+    return 'text-navy-800 dark:text-navy-100 bg-transparent enabled:hover:border-white/[0.025] enabled:hover:bg-gradient-to-br enabled:hover:from-navy-600/25 enabled:hover:to-navy-400/25'
+  }
+}

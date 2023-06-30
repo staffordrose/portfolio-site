@@ -1,18 +1,26 @@
 import type { FC } from 'react'
-import { tw } from 'twind'
+
+const colors = {
+  navy: {
+    back: ['navy-300', 'navy-500'],
+    front: ['navy-500', 'navy-700'],
+  },
+  'yellow-orange-red': {
+    back: ['navy-300', 'navy-500'],
+    front: ['yellow-500', 'orange-500', 'red-500'],
+  },
+}
 
 export type LogoProps = {
   id: string
   className?: string
-  backColors?: string[]
-  frontColors?: string[]
+  colorScheme?: 'navy' | 'yellow-orange-red'
 }
 
 export const Logo: FC<LogoProps> = ({
   id,
   className = '',
-  backColors = ['colors.navy.300', 'colors.navy.500'],
-  frontColors = ['colors.yellow.500', 'colors.orange.500', 'colors.red.500'],
+  colorScheme = 'yellow-orange-red',
 }) => (
   <svg
     className={className}
@@ -23,21 +31,21 @@ export const Logo: FC<LogoProps> = ({
 
     <defs>
       <linearGradient id={`${id}-back-gradient`}>
-        {backColors.map((color, i) => (
+        {colors[colorScheme]?.back?.map((color, i) => (
           <stop
             key={i}
-            offset={i / (frontColors.length - 1)}
-            stopColor={`${tw.theme(color)}`}
+            offset={i / (colors[colorScheme].back.length - 1)}
+            stopColor={`var(--colors-${color})`}
           />
         ))}
       </linearGradient>
 
       <linearGradient id={`${id}-front-gradient`}>
-        {frontColors.map((color, i) => (
+        {colors[colorScheme]?.front?.map((color, i) => (
           <stop
             key={i}
-            offset={i / (frontColors.length - 1)}
-            stopColor={`${tw.theme(color)}`}
+            offset={i / (colors[colorScheme].front.length - 1)}
+            stopColor={`var(--colors-${color})`}
           />
         ))}
       </linearGradient>

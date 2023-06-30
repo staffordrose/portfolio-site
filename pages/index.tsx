@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { NextPage } from 'next'
 import { useTheme } from 'next-themes'
-import { css, tw } from 'twind'
 import { projects } from '@/common/data'
 import { mergeRecords } from '@/common/utils'
 import {
@@ -70,16 +69,7 @@ const Home: NextPage = () => {
 
       <div
         aria-hidden="true"
-        className={`
-          fixed z-50 bottom-[calc(20vh_-_80px)] left-[calc(50%_-_680px)]
-          ${css`
-            display: none;
-
-            @media (min-width: 1392px) {
-              display: flex;
-            }
-          `}
-        `}
+        className="fixed z-50 bottom-[calc(20vh_-_80px)] left-[calc(50%_-_680px)] hidden min-[1392px]:flex"
       >
         <SectionNav
           sections={sections}
@@ -91,15 +81,7 @@ const Home: NextPage = () => {
       <main className="relative w-full pt-16">
         <section
           ref={el => (sectionElements.current[0] = el)}
-          className={`
-            relative z-10
-            min-h-screen w-full
-            after:(
-              content-['']
-              absolute z-20 top-[80%] bottom-0 left-0 right-0
-              bg-gradient-to-b from-transparent to-(navy-50 dark:navy-900)
-            )
-          `}
+          className="relative z-10 min-h-screen w-full after:content-[''] after:absolute after:z-20 after:top-[80%] after:bottom-0 after:left-0 after:right-0 after:bg-gradient-to-b after:from-transparent after:to-navy-50 dark:after:to-navy-900"
         >
           <a
             ref={el => (anchorElements.current[0] = el)}
@@ -114,7 +96,7 @@ const Home: NextPage = () => {
 
         <section
           ref={el => (sectionElements.current[1] = el)}
-          className="min-h-[calc(100vh_-_64px)] w-full mb-16"
+          className="min-h-screen-header w-full mb-16"
         >
           <a
             ref={el => (anchorElements.current[1] = el)}
@@ -129,7 +111,7 @@ const Home: NextPage = () => {
 
         <section
           ref={el => (sectionElements.current[2] = el)}
-          className="min-h-[calc(100vh_-_64px)] w-full max-w-7xl mx-auto mb-24"
+          className="min-h-screen-header w-full max-w-7xl mx-auto mb-24"
         >
           <a
             ref={el => (anchorElements.current[2] = el)}
@@ -148,29 +130,7 @@ const Home: NextPage = () => {
 
         <section
           ref={el => (sectionElements.current[3] = el)}
-          className={`
-            relative
-            min-h-[50vh] w-full mb-32 py-1
-            after:(
-              content-['']
-              absolute -z-10 top-0 left-0
-              h-full w-full
-              opacity-75
-            )
-            ${css`
-              &::after {
-                background: linear-gradient(
-                  135deg,
-                  ${tw.theme('colors.red.500')} 0%,
-                  ${tw.theme('colors.orange.500')} 20%,
-                  ${tw.theme('colors.yellow.500')} 45%,
-                  ${tw.theme('colors.yellow.500')} 55%,
-                  ${tw.theme('colors.orange.500')} 80%,
-                  ${tw.theme('colors.red.500')} 100%
-                );
-              }
-            `}
-          `}
+          className="relative min-h-[50vh] w-full mb-32 py-1 after:content-[''] after:absolute after:-z-10 after:top-0 after:left-0 after:h-full after:w-full after:opacity-75 after:bg-gradient-yellow-orange-red-500"
         >
           <a
             ref={el => (anchorElements.current[3] = el)}
@@ -180,27 +140,7 @@ const Home: NextPage = () => {
             href={`#${sections[3].id}`}
           />
 
-          <div
-            className={`
-              relative z-10
-              h-full w-full
-              bg-(white/75 dark:navy-900/75)
-              after:(
-                content-['']
-                absolute -z-10 top-0 left-0
-                block
-                h-full w-full
-                bg-(svg-yellow-100 dark:svg-yellow-800)
-                opacity-(25 dark:5)
-              )
-              ${css`
-                &::after {
-                  background-size: 15px 15px, 100% 100%;
-                  background-position: calc(50% - 3.75px) 0, 0 0;
-                }
-              `}
-            `}
-          >
+          <div className="relative z-10 h-full w-full bg-white/75 dark:bg-navy-900/75 after:content-[''] after:absolute after:-z-10 after:top-0 after:left-0 after:block after:h-full after:w-full after:bg-svg-yellow-100 dark:after:bg-svg-yellow-800 after:opacity-25 dark:after:opacity-5 after:bg-squares-md">
             <CallToAction />
           </div>
         </section>

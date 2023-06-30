@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import Link from 'next/link'
 import { NextRouter, useRouter } from 'next/router'
 import { useTheme } from 'next-themes'
-import { css } from 'twind'
+import cn from 'classnames'
 import { BiMoon, BiSun } from 'react-icons/bi'
 import { pages } from '@/common/data'
 import { Button, Logo } from '@/components'
@@ -57,19 +57,16 @@ const Nav: FC<NavProps> = ({ router }) => {
   return (
     <nav className="relative h-full">
       <span
-        className={`
-          absolute bottom-[18px] left-0
-          h-[2px] rounded-[1px]
-          bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500
-          ${css`
-            width: ${marker.width - 16}px;
-            opacity: ${slug ? 1 : 0};
-            transform: translate3d(${marker.offsetLeft + 9}px, 0, 0);
-            transition: ${prevMarker?.width > 0
-              ? `transform 300ms, width 200ms, opacity 300ms`
-              : `opacity 300ms`};
-          `}
-        `}
+        className={cn(
+          'absolute bottom-[18px] left-0 h-[2px] rounded-[1px] bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500',
+          prevMarker?.width > 0 ? 'transition-all' : 'transition-opacity',
+          'duration-300',
+        )}
+        style={{
+          width: marker.width - 16,
+          opacity: slug ? 1 : 0,
+          transform: `translate3d(${marker.offsetLeft + 9}px, 0, 0)`,
+        }}
       />
 
       <ul className="flex gap-2 items-center h-full w-auto">
@@ -78,17 +75,7 @@ const Nav: FC<NavProps> = ({ router }) => {
             <Link href={`/${id}`}>
               <a
                 ref={el => (linkElements.current[i] = el)}
-                className={`
-                  overflow-hidden
-                  inline-flex gap-2 items-center
-                  h-10 px-2 border-[1px] border-solid border-white/0 rounded-sm
-                  font-ibm-plex-mono text-(navy-800 dark:navy-100)
-                  bg-transparent
-                  hover:(
-                    border-white/[0.025]
-                    bg-gradient-to-br from-navy-600/25 to-navy-400/25
-                  )
-                `}
+                className="overflow-hidden inline-flex gap-2 items-center h-10 px-2 border-[1px] border-solid border-white/0 rounded-sm font-ibm-plex-mono text-navy-800 dark:text-navy-100 bg-transparent hover:border-white/[0.025] hover:bg-gradient-to-br hover:from-navy-600/25 hover:to-navy-400/25"
               >
                 {name}
               </a>
@@ -117,31 +104,9 @@ const ThemeToggle: FC = () => {
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       <span className="block h-6 w-6">
-        <span
-          className={`
-            flex flex-col justify-between
-            h-[72px] w-6
-            dark:rotate-180
-            motion-safe:(transition-transform duration-300 ease-out)
-          `}
-        >
-          <BiSun
-            className={`
-              h-6 w-6
-              text-navy-800
-              opacity-(100 dark:0)
-              transition-opacity duration-200
-            `}
-          />
-          <BiMoon
-            className={`
-              h-6 w-6
-              text-navy-100
-              opacity-(0 dark:100)
-              rotate-180
-              transition-opacity duration-200
-            `}
-          />
+        <span className="flex flex-col justify-between h-[72px] w-6 dark:rotate-180 motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out">
+          <BiSun className="h-6 w-6 text-navy-800 opacity-100 dark:opacity-0 transition-opacity duration-200" />
+          <BiMoon className="h-6 w-6 text-navy-100 opacity-0 dark:opacity-100 rotate-180 transition-opacity duration-200" />
         </span>
       </span>
     </Button>
@@ -152,20 +117,8 @@ export const Header: FC = () => {
   const router = useRouter()
 
   return (
-    <header
-      className={`
-        fixed z-20 top-0 left-0
-        h-16 w-full
-        bg-(navy-50/60 dark:navy-900/75)
-        backdrop-(filter blur-sm)
-      `}
-    >
-      <div
-        className={`
-          flex flex-row gap-2 justify-between items-center
-          h-full w-full max-w-7xl mx-auto px-(3 sm:4)
-        `}
-      >
+    <header className="fixed z-20 top-0 left-0 h-16 w-full bg-navy-50/60 dark:bg-navy-900/75 backdrop-filter backdrop-blur-sm">
+      <div className="flex flex-row gap-2 justify-between items-center h-full w-full max-w-7xl mx-auto px-4">
         <Button
           size="lg"
           isSquare

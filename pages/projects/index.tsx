@@ -13,12 +13,12 @@ const Projects: NextPage = () => {
     <>
       <Head title="Projects" description="My recent web devlopment projects." />
 
-      <main className="min-h-[calc(100vh_-_64px)] mt-16 mb-32">
+      <main className="min-h-screen-header mt-16 mb-32">
         <div className="h-auto w-full max-w-7xl mx-auto p-4">
           <h1 className="my-8 md:my-12">Projects</h1>
 
           <div className="grid grid-cols-[1fr] gap-6 lg:grid-cols-[192px_1fr] xl:grid-cols-[256px_1fr]">
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] lg:(grid-cols-1) gap-2 content-start">
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] lg:grid-cols-1 gap-2 content-start">
               {projects.map(project => {
                 const isActive = project.id === router.query.p
 

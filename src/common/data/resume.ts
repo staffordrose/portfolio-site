@@ -1,4 +1,3 @@
-import { css } from 'twind'
 import {
   BiBuildingHouse,
   BiEnvelope,
@@ -88,13 +87,7 @@ export const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `
-                                group~link
-                                inline
-                                ${css`
-                                  vertical-align: -2px;
-                                `}
-                              `,
+                              className: 'group/link inline align-[-2px]',
                               'aria-label': `View Leisure Time Inc. customer portal`,
                               href: 'https://my.leisuretimeinc.com',
                               openInNew: true,
@@ -103,7 +96,7 @@ export const resume: ResumeSection[] = [
                               {
                                 type: 'react-icon',
                                 props: {
-                                  className: 'group~link-hover:text-orange-500',
+                                  className: 'group-hover/link:text-orange-500',
                                 },
                                 component: BiLinkExternal,
                               },
@@ -121,13 +114,7 @@ export const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `
-                                group~link
-                                inline
-                                ${css`
-                                  vertical-align: -2px;
-                                `}
-                              `,
+                              className: 'group/link inline align-[-2px]',
                               'aria-label': `View Leisure Time Inc. employee dashboard`,
                               href: 'https://admin.leisuretimeinc.com',
                               openInNew: true,
@@ -136,7 +123,7 @@ export const resume: ResumeSection[] = [
                               {
                                 type: 'react-icon',
                                 props: {
-                                  className: 'group~link-hover:text-orange-500',
+                                  className: 'group-hover/link:text-orange-500',
                                 },
                                 component: BiLinkExternal,
                               },
@@ -154,13 +141,7 @@ export const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `
-                                group~link
-                                inline
-                                ${css`
-                                  vertical-align: -2px;
-                                `}
-                              `,
+                              className: 'group/link inline align-[-2px]',
                               'aria-label': `View Leisure Time Inc. ecommerce store`,
                               href: 'https://shop.leisuretimeinc.com',
                               openInNew: true,
@@ -169,7 +150,7 @@ export const resume: ResumeSection[] = [
                               {
                                 type: 'react-icon',
                                 props: {
-                                  className: 'group~link-hover:text-orange-500',
+                                  className: 'group-hover/link:text-orange-500',
                                 },
                                 component: BiLinkExternal,
                               },
@@ -187,13 +168,7 @@ export const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `
-                                group~link
-                                inline
-                                ${css`
-                                  vertical-align: -2px;
-                                `}
-                              `,
+                              className: 'group/link inline align-[-2px]',
                               'aria-label': `View Leisure Time Inc. main website`,
                               href: 'https://leisuretimeinc.com',
                               openInNew: true,
@@ -202,7 +177,7 @@ export const resume: ResumeSection[] = [
                               {
                                 type: 'react-icon',
                                 props: {
-                                  className: 'group~link-hover:text-orange-500',
+                                  className: 'group-hover/link:text-orange-500',
                                 },
                                 component: BiLinkExternal,
                               },
@@ -271,13 +246,8 @@ export const resume: ResumeSection[] = [
                                   {
                                     type: 'a',
                                     props: {
-                                      className: `
-                                        group~link
-                                        inline
-                                        ${css`
-                                          vertical-align: -2px;
-                                        `}
-                                      `,
+                                      className:
+                                        'group/link inline align-[-2px]',
                                       'aria-label': `View Montana Fly Fishing Guides website`,
                                       href: 'https://www.montanaflyfishingguides.com',
                                       openInNew: true,
@@ -287,7 +257,7 @@ export const resume: ResumeSection[] = [
                                         type: 'react-icon',
                                         props: {
                                           className:
-                                            'group~link-hover:text-orange-500',
+                                            'group-hover/link:text-orange-500',
                                         },
                                         component: BiLinkExternal,
                                       },
@@ -305,13 +275,8 @@ export const resume: ResumeSection[] = [
                                   {
                                     type: 'a',
                                     props: {
-                                      className: `
-                                      group~link
-                                      inline
-                                      ${css`
-                                        vertical-align: -2px;
-                                      `}
-                                    `,
+                                      className:
+                                        'group/link inline align-[-2px]',
                                       'aria-label': `View Fly Fish Rockport website`,
                                       href: 'https://www.flyfishrockport.com',
                                       openInNew: true,
@@ -321,7 +286,7 @@ export const resume: ResumeSection[] = [
                                         type: 'react-icon',
                                         props: {
                                           className:
-                                            'group~link-hover:text-orange-500',
+                                            'group-hover/link:text-orange-500',
                                         },
                                         component: BiLinkExternal,
                                       },
@@ -339,13 +304,8 @@ export const resume: ResumeSection[] = [
                                   {
                                     type: 'a',
                                     props: {
-                                      className: `
-                                      group~link
-                                      inline
-                                      ${css`
-                                        vertical-align: -2px;
-                                      `}
-                                    `,
+                                      className:
+                                        'group/link inline align-[-2px]',
                                       'aria-label': `View Leisure Time Inc. promotional video`,
                                       href: 'https://www.youtube.com/watch?v=wAkHvzqbdOo',
                                       openInNew: true,
@@ -355,7 +315,7 @@ export const resume: ResumeSection[] = [
                                         type: 'react-icon',
                                         props: {
                                           className:
-                                            'group~link-hover:text-orange-500',
+                                            'group-hover/link:text-orange-500',
                                         },
                                         component: BiLinkExternal,
                                       },
@@ -382,13 +342,7 @@ export const resume: ResumeSection[] = [
                           {
                             type: 'a',
                             props: {
-                              className: `
-                              group~link
-                              inline
-                              ${css`
-                                vertical-align: -2px;
-                              `}
-                            `,
+                              className: 'group/link inline align-[-2px]',
                               'aria-label': `View Stafford Rose Media Vimeo channel`,
                               href: 'https://vimeo.com/staffordrosemedia',
                               openInNew: true,
@@ -397,7 +351,7 @@ export const resume: ResumeSection[] = [
                               {
                                 type: 'react-icon',
                                 props: {
-                                  className: 'group~link-hover:text-orange-500',
+                                  className: 'group-hover/link:text-orange-500',
                                 },
                                 component: BiLinkExternal,
                               },
@@ -804,14 +758,14 @@ export const resume: ResumeSection[] = [
                   {
                     type: 'a',
                     props: {
-                      className: `group~link min-h-[48px] sm:min-h-0`,
+                      className: `group/link min-h-[48px] sm:min-h-0`,
                       href: `tel:18176942015`,
                     },
                     children: [
                       {
                         type: 'react-icon',
                         props: {
-                          className: `group~link-hover:text-yellow-500`,
+                          className: `group-hover/link:text-yellow-500`,
                         },
                         component: BiPhone,
                       },
@@ -829,14 +783,14 @@ export const resume: ResumeSection[] = [
                   {
                     type: 'a',
                     props: {
-                      className: `group~link min-h-[48px] sm:min-h-0`,
+                      className: `group/link min-h-[48px] sm:min-h-0`,
                       href: `mailto:hello@staffordrose.com`,
                     },
                     children: [
                       {
                         type: 'react-icon',
                         props: {
-                          className: `group~link-hover:text-yellow-500`,
+                          className: `group-hover/link:text-yellow-500`,
                         },
                         component: BiEnvelope,
                       },
@@ -875,7 +829,7 @@ export const resume: ResumeSection[] = [
                   {
                     type: 'a',
                     props: {
-                      className: `group~link min-h-[48px] sm:min-h-0`,
+                      className: `group/link min-h-[48px] sm:min-h-0`,
                       href: `https://github.com/staffordrose`,
                       openInNew: true,
                     },
@@ -883,7 +837,7 @@ export const resume: ResumeSection[] = [
                       {
                         type: 'react-icon',
                         props: {
-                          className: `group~link-hover:text-yellow-500`,
+                          className: `group-hover/link:text-yellow-500`,
                         },
                         component: FiGithub,
                       },

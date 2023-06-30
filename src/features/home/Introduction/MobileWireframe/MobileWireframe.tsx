@@ -3,6 +3,7 @@ import type { FC } from 'react'
 import * as THREE from 'three'
 import gsap from 'gsap'
 import { BiPlay } from 'react-icons/bi'
+import cn from 'classnames'
 import { Button } from '@/components'
 import { usePrefersReducedMotion, usePrevious } from '@/hooks'
 import {
@@ -361,14 +362,11 @@ export const MobileWireframe: FC<MobileWireframeProps> = ({ theme }) => {
       {prefersReducedMotion && (
         <div className="relative">
           <div
-            className={`
-              absolute top-0 left-0 md:left-1/2
-              ${
-                isPlaying ? `hidden invisible` : `flex visible`
-              } justify-center items-center
-              h-full min-h-screen w-full md:w-1/2 max-w-7xl
-              bg-(navy-50 dark:navy-900)
-            `}
+            className={cn(
+              'absolute top-0 left-0 md:left-1/2',
+              isPlaying ? 'hidden invisible' : 'flex visible',
+              'justify-center items-center h-full min-h-screen w-full md:w-1/2 max-w-7xl bg-navy-50 dark:bg-navy-900',
+            )}
           >
             <Button
               className="inline-block h-48 w-48"

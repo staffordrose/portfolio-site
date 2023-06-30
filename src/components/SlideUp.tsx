@@ -1,23 +1,8 @@
 import type { FC, ReactNode } from 'react'
-import { css, keyframes } from 'twind'
-
-const slideUpKeyframes = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(32px);
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`
+import cn from 'classnames'
 
 export type SlideUpProps = {
   animationDelay?: number
-  animationDuration?: number
   animationPlayState?: 'paused' | 'running'
   className?: string
   children: ReactNode
@@ -25,21 +10,17 @@ export type SlideUpProps = {
 
 export const SlideUp: FC<SlideUpProps> = ({
   animationDelay = 0,
-  animationDuration = 800,
   animationPlayState = 'running',
   className,
   children,
 }) => (
   <div
-    className={`${className || ``} motion-safe:${css`
-      opacity: 0;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-      animation-name: ${slideUpKeyframes};
-    `}`}
+    className={cn(
+      'motion-safe:opacity-0 motion-safe:animate-slide-up',
+      className,
+    )}
     style={{
       animationDelay: `${animationDelay}ms`,
-      animationDuration: `${animationDuration}ms`,
       animationPlayState,
     }}
   >

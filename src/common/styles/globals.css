@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --colors-navy-300: theme('colors.navy.300');
+  --colors-navy-500: theme('colors.navy.500');
+  --colors-navy-700: theme('colors.navy.700');
+  --colors-orange-500: theme('colors.orange.500');
+  --colors-red-500: theme('colors.red.500');
+  --colors-yellow-500: theme('colors.yellow.500');
+}
+
+@layer base {
+  body {
+    @apply min-w-[360px] bg-navy-50 dark:bg-navy-900;
+  }
+  body,
+  p {
+    @apply font-helvetica-neue;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-ibm-plex-mono text-navy-800 dark:text-navy-100;
+  }
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  h6 {
+    @apply text-base;
+  }
+  b,
+  strong {
+    @apply font-medium;
+  }
+  code {
+    @apply px-1 rounded-sm font-ibm-plex-mono text-sm text-navy-700 bg-navy-200 dark:text-navy-300 dark:bg-navy-700;
+  }
+}
+
+@layer components {
+  .bg-squares-sm {
+    background-size: 7.5px 7.5px, 100% 100%;
+    background-position: calc(50% - 1.875px) 0, 0 0;
+  }
+
+  .bg-squares-md {
+    background-size: 15px 15px, 100% 100%;
+    background-position: calc(50% - 3.75px) 0, 0 0;
+  }
+
+  .bg-technologies-size {
+    background-size: 630px 600px;
+    background-position: calc(50% - 375px), calc(50% + 375px) 0;
+  }
+
+  @media screen(sm) {
+    .bg-technologies-size {
+      background-position: calc(50% - 450px), calc(50% + 450px) 0;
+    }
+  }
+
+  @media screen(lg) {
+    .bg-technologies-size {
+      background-position: calc(50% - 600px), calc(50% + 600px) 0;
+    }
+  }
+
+  @media screen(2xl) {
+    .bg-technologies-size {
+      background-position: calc(50% - 750px), calc(50% + 750px) 0;
+    }
+  }
+}

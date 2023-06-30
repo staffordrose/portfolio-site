@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { FC, MutableRefObject } from 'react'
+import cn from 'classnames'
 import { mergeRecords } from '@/common/utils'
 
 export type SectionNavProps = {
@@ -62,14 +63,7 @@ export const SectionNav: FC<SectionNavProps> = ({
       : 120
 
   return (
-    <div
-      className={`
-      relative
-      h-40 w-10 rounded-sm
-      bg-(navy-50/50 dark:navy-900/50)
-      backdrop-(filter blur-sm)
-    `}
-    >
+    <div className="relative h-40 w-10 rounded-sm bg-navy-50/50 dark:bg-navy-900/50 backdrop-filter backdrop-blur-sm">
       <nav className="relative z-10">
         <ul>
           {sections.map(({ id }, i) => {
@@ -79,7 +73,7 @@ export const SectionNav: FC<SectionNavProps> = ({
               <li key={id}>
                 <button
                   ref={el => (linkElements.current[i] = el)}
-                  className="group~marker flex justify-center items-center h-10 w-10"
+                  className="group/marker flex justify-center items-center h-10 w-10"
                   onClick={() => {
                     anchorElements.current[i]?.scrollIntoView({
                       behavior: 'smooth',
@@ -87,22 +81,14 @@ export const SectionNav: FC<SectionNavProps> = ({
                   }}
                 >
                   <span
-                    className={`
-                      relative
-                      inline-flex
-                      h-3 w-3
-                      ${
-                        i <= activeIndex
-                          ? `bg-(navy-600 dark:navy-400)`
-                          : `bg-(navy-400 dark:navy-600)`
-                      }
-                      ${i === activeIndex ? `scale-100` : `scale-[0.6]`}
-                      transition-transform duration-100
-                      group~marker-hover:(
-                        bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500
-                        scale-100
-                      )
-                    `}
+                    className={cn(
+                      'relative inline-flex h-3 w-3',
+                      i <= activeIndex
+                        ? 'bg-navy-600 dark:bg-navy-400'
+                        : 'bg-navy-400 dark:bg-navy-600',
+                      i === activeIndex ? 'scale-100' : 'scale-[0.6]',
+                      'transition-transform duration-100 group-hover/marker:bg-gradient-to-br group-hover/marker:from-yellow-500 group-hover/marker:via-orange-500 group-hover/marker:to-red-500 group-hover/marker:scale-100',
+                    )}
                   />
                 </button>
               </li>
@@ -112,7 +98,7 @@ export const SectionNav: FC<SectionNavProps> = ({
       </nav>
 
       <svg
-        className="absolute top-0 left-0 h-40 w-10 stroke-(navy-600 dark:navy-400)"
+        className="absolute top-0 left-0 h-40 w-10 stroke-navy-600 dark:stroke-navy-400"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 40 160"
       >
