@@ -23,7 +23,7 @@ export const getScreen = ({ scene, screenColor }: GetScreen) => {
     .lineTo(sx + sr, sy)
     .quadraticCurveTo(sx, sy, sx, sy + sr)
 
-  const screenGeometry = new THREE.ShapeBufferGeometry(screenShape)
+  const screenGeometry = new THREE.ShapeGeometry(screenShape)
   const screenMaterial = new THREE.MeshBasicMaterial({
     color: screenColor,
   })

@@ -18,7 +18,7 @@ import {
 import { getCarouselTimeline, getMainTimeline } from './timelines'
 
 type MobileWireframeProps = {
-  theme: 'light' | 'dark'
+  theme?: 'light' | 'dark' | string
 }
 
 export const MobileWireframe: FC<MobileWireframeProps> = ({ theme }) => {
@@ -379,7 +379,7 @@ export const MobileWireframe: FC<MobileWireframeProps> = ({ theme }) => {
         </div>
       )}
 
-      <div ref={mountRef} data-theme={theme} />
+      <div ref={mountRef} />
     </>
   )
 }

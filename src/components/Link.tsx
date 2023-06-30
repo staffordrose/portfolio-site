@@ -82,20 +82,19 @@ export const Link: FC<LinkProps> = ({
       />
     )
   ) : (
-    <NextLink href={href}>
-      <a
-        className={cn(
-          variant === 'button'
-            ? cn(
-                buttonStyles(colorScheme),
-                isSquare ? squareButtonSizes[size] : buttonSizes[size],
-              )
-            : cn(inlineStyles(colorScheme), inlineSizes[size]),
-          className,
-        )}
-        {...props}
-      />
-    </NextLink>
+    <NextLink
+      href={href}
+      className={cn(
+        variant === 'button'
+          ? cn(
+              buttonStyles(colorScheme),
+              isSquare ? squareButtonSizes[size] : buttonSizes[size],
+            )
+          : cn(inlineStyles(colorScheme), inlineSizes[size]),
+        className,
+      )}
+      {...props}
+    ></NextLink>
   )
 }
 

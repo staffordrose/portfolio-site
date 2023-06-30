@@ -10,7 +10,7 @@ export type HeadProps = {
 export const Head: FC<HeadProps> = ({ title, description, image }) => {
   return (
     <NextHead>
-      <title>{title} | Stafford Rose</title>
+      <title>{`${title} | Stafford Rose`}</title>
       <meta name="og:title" content={title} />
       <meta name="description" content={description} />
       <meta name="og:description" content={description} />

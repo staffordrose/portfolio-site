@@ -20,7 +20,7 @@ const Nav: FC<NavProps> = ({ router }) => {
     setSlug(router.pathname.slice(1))
   }, [router.pathname])
 
-  const linkElements = useRef<(HTMLAnchorElement | null)[]>([])
+  const linkElements = useRef<(HTMLSpanElement | null)[]>([])
 
   const [marker, setMarker] = useState<{
     width: number
@@ -32,7 +32,7 @@ const Nav: FC<NavProps> = ({ router }) => {
 
   const prevMarker = usePrevious(marker)
 
-  const updateMarker = useCallback(slug => {
+  const updateMarker = useCallback((slug: string) => {
     if (!slug) {
       setMarker({
         width: 0,
@@ -73,12 +73,12 @@ const Nav: FC<NavProps> = ({ router }) => {
         {pages.map(({ id, name }, i) => (
           <li key={id}>
             <Link href={`/${id}`}>
-              <a
+              <span
                 ref={el => (linkElements.current[i] = el)}
                 className="overflow-hidden inline-flex gap-2 items-center h-10 px-2 border-[1px] border-solid border-white/0 rounded-sm font-ibm-plex-mono text-navy-800 dark:text-navy-100 bg-transparent hover:border-white/[0.025] hover:bg-gradient-to-br hover:from-navy-600/25 hover:to-navy-400/25"
               >
                 {name}
-              </a>
+              </span>
             </Link>
           </li>
         ))}

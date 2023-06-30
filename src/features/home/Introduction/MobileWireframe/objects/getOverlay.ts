@@ -19,7 +19,7 @@ export const getOverlay = ({
     .lineTo(-20, -20)
   overlayShape.holes.push(screenShape)
 
-  const overlayGeometry = new THREE.ShapeBufferGeometry(overlayShape)
+  const overlayGeometry = new THREE.ShapeGeometry(overlayShape)
   const overlayMaterial = new THREE.MeshBasicMaterial({
     color: overlayColor,
     opacity: 0.5,

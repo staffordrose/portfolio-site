@@ -4,7 +4,7 @@ import { useViewportScroll } from '@/hooks'
 import { MobileWireframe } from './MobileWireframe'
 
 export type IntroductionProps = {
-  theme: 'light' | 'dark'
+  theme?: 'light' | 'dark' | string
   isVisible: boolean
 }
 

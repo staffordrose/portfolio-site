@@ -101,6 +101,10 @@ export const ProjectGrid: FC<ProjectGridProps> = ({
                         const { image, title: technologyTitle } =
                           technologies.find(({ id }) => id === t) ?? {}
 
+                        if (!technologyTitle) {
+                          return null
+                        }
+
                         return (
                           <ScaleIn
                             key={t}
