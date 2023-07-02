@@ -60,12 +60,12 @@ export const technologies: Technology[] = [
     title: `Three.js`,
   },
   {
-    id: `twind`,
+    id: `tailwind-css`,
     image: {
-      src: '/images/technologies/twind.svg',
+      src: '/images/technologies/tailwind-css.svg',
       alt: '',
     },
-    title: `Twind`,
+    title: `Tailwind CSS`,
   },
   {
     id: `typescript`,

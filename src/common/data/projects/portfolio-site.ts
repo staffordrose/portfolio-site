@@ -135,7 +135,7 @@ export const portfolioSite: Project = {
     },
     {
       type: 'h4',
-      content: `Tailwind CSS/Twind`,
+      content: `Tailwind CSS`,
     },
     {
       type: 'p',
@@ -172,7 +172,7 @@ export const portfolioSite: Project = {
     },
     {
       type: 'p',
-      content: `After so much time with libraries like Styled Components, Emotion CSS, and Framer Motion, the developer experience of a utility-first framework like Tailwind CSS was a bit jarring at first. I ended up going with a tailwind-in-js solution to ease the transition. I settled on Twind because I enjoy the API and it seems like a promising project. It hasn't received many updates over the last few months, so I may need to re-evaluate in the future.`,
+      content: `After so much time with libraries like Styled Components, Emotion CSS, and Framer Motion, the developer experience of a utility-first framework like Tailwind CSS was a bit jarring at first. Initially, I built the site with Twind but later refactored to vanilla Tailwind.`,
     },
     {
       type: 'h4',
@@ -183,5 +183,5 @@ export const portfolioSite: Project = {
       content: `Three.js and GreenSock (GSAP) have become two of my favorite tools. I used them to create the interactive website wireframe animation at the top of the home page. Desktop users can move the mouse horizontally and mobile users can scroll vertically to reveal/hide the elevation of the wireframe's layers and elements.`,
     },
   ],
-  technologies: ['typescript', 'twind', 'three-js', 'gsap'],
+  technologies: ['typescript', 'tailwind-css', 'three-js', 'gsap'],
 }
